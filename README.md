@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Cabinet Jade - Site Web Chiropractie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un site web élégant et professionnel pour un cabinet de chiropractie basé en France.
 
-## Available Scripts
+## Caractéristiques
 
-In the project directory, you can run:
+- Design responsive adapté à tous les appareils
+- Esthétique zen et médicale avec une palette de couleurs apaisantes
+- Animations subtiles pour une expérience utilisateur optimale
+- Présentation détaillée des services chiropratiques
+- Informations sur l'équipement et les techniques utilisées
+- Grille tarifaire transparente
+- Formulaire de contact et intégration Google Maps
+- Compatible avec la prise de rendez-vous en ligne
 
-### `npm start`
+## Structure du Site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Page d'accueil**: Présentation du cabinet avec appel à l'action
+- **À propos**: Présentation du praticien, philosophie du cabinet
+- **Services/Techniques**: Détail des techniques chiropratiques proposées
+- **Équipement**: Présentation de la table de chiropractie et autres équipements
+- **Tarifs**: Grille tarifaire claire pour les différentes prestations
+- **Contact**: Formulaire de contact et informations pratiques
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Utilisées
 
-### `npm test`
+- React.js
+- TypeScript
+- Material-UI pour les composants d'interface
+- Framer Motion pour les animations
+- React Router pour la navigation
+- React Icons pour les icônes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation et Démarrage
 
-### `npm run build`
+1. Clonez ce dépôt
+2. Installez les dépendances: `npm install`
+3. Démarrez l'application en mode développement: `npm start`
+4. Ouvrez [http://localhost:3000](http://localhost:3000) pour voir le site dans votre navigateur
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Déploiement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Pour construire l'application pour la production:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+```
 
-### `npm run eject`
+Les fichiers prêts pour le déploiement seront générés dans le dossier `build`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Personnalisation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Vous pouvez personnaliser le site en modifiant:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Les informations du cabinet dans les composants correspondants
+- Les couleurs et le thème dans `src/styles/theme.ts`
+- Les images dans le dossier `src/assets/images`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Licence
 
-## Learn More
+Ce projet est distribué sous licence MIT.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Crédits
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Créé pour Cabinet Jade, 2023. Tous droits réservés.
