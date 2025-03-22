@@ -51,7 +51,7 @@ const Footer = () => {
               63 Rue de Caen<br />
               14480 Creully sur Seulles, France<br />
               Tél: 0695112755<br />
-              Email: contact@cabinet-jade-philippe.fr
+              Email: edd.philippe@gmail.com
             </Typography>
           </Grid>
 

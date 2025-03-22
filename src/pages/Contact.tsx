@@ -118,7 +118,7 @@ const Contact = () => {
                     <strong>Téléphone:</strong> 0695112755
                   </Typography>
                   <Typography variant="body1" sx={{ mb: 1 }}>
-                    <strong>Email:</strong> contact@cabinet-jade-philippe.fr
+                    <strong>Email:</strong> edd.philippe@gmail.com
                   </Typography>
                   <Typography variant="body1">
                     <strong>Horaires:</strong> Lun-Ven: 9h-19h | Sam: 9h-13h
