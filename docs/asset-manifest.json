@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cabinet-jade/static/css/main.29103a86.css",
+    "main.js": "/cabinet-jade/static/js/main.a89f5f23.js",
+    "static/js/453.9cf70e64.chunk.js": "/cabinet-jade/static/js/453.9cf70e64.chunk.js",
+    "static/media/cabinet-image.jpeg": "/cabinet-jade/static/media/cabinet-image.8379fd9c81e8d9b48d76.jpeg",
+    "static/media/poppins-latin-400-normal.woff": "/cabinet-jade/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/poppins-latin-400-normal.woff2": "/cabinet-jade/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/cabinet-jade/static/media/poppins-latin-ext-400-normal.7e12786771ac4a8e6a5c.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/cabinet-jade/static/media/poppins-latin-ext-400-normal.d7c074a9c34fe9785f69.woff2",
+    "index.html": "/cabinet-jade/index.html",
+    "main.29103a86.css.map": "/cabinet-jade/static/css/main.29103a86.css.map",
+    "main.a89f5f23.js.map": "/cabinet-jade/static/js/main.a89f5f23.js.map",
+    "453.9cf70e64.chunk.js.map": "/cabinet-jade/static/js/453.9cf70e64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29103a86.css",
+    "static/js/main.a89f5f23.js"
+  ]
+}
