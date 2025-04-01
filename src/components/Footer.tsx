@@ -25,7 +25,7 @@ const Footer = () => {
     services: [
       { name: 'Chiropraxie Générale', path: '/services#chiropratique-generale' },
       { name: 'Thérapie des Tissus Mous', path: '/services#therapie-tissus-mous' },
-      { name: 'Dry Needing', path: '/services#dry-needing' },
+      { name: 'Dry Needling', path: '/services#dry-needing' },
       { name: 'Réhabilitation', path: '/services#rehabilitation' }
     ],
     legal: [
