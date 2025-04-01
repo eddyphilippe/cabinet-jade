@@ -11,6 +11,7 @@ interface SectionProps {
   py?: number;
   id?: string;
   titleColor?: string;
+  titleVariant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 const Section: React.FC<SectionProps> = ({
@@ -22,7 +23,8 @@ const Section: React.FC<SectionProps> = ({
   maxWidth = 'lg',
   py = 6,
   id,
-  titleColor
+  titleColor,
+  titleVariant = 'h3'
 }) => {
   const getBgColor = () => {
     switch (background) {
@@ -59,7 +61,7 @@ const Section: React.FC<SectionProps> = ({
           >
             {title && (
               <Typography
-                variant="h3"
+                variant={titleVariant}
                 component="h2"
                 gutterBottom
                 sx={{

@@ -20,10 +20,11 @@ const Home = () => {
         title="Bienvenue dans un espace dédié à votre santé vertébrale et à votre bien-être"
         centered
         background="white"
+        titleVariant="h5"
       >
         <Typography paragraph>
           Votre thérapeute vous accueille dans un espace calme et apaisant pour prendre soin de votre santé.
-          Notre approche de la chiropraxie est globale, douce et adaptée à chaque patient.
+          Son approche de la chiropraxie est globale, douce et adaptée à chaque patient.
         </Typography>
       </Section>
 
