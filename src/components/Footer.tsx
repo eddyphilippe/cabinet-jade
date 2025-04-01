@@ -47,11 +47,8 @@ const Footer = () => {
             <Typography variant="body2" sx={{ mb: 2, opacity: 0.8 }}>
               Cabinet de chiropraxie dédié à la santé de votre système neuro-musculo-squelettique et à votre bien-être.
             </Typography>
-            <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              63 Rue de Caen<br />
-              14480 Creully sur Seulles, France<br />
-              Tél: 0695112755<br />
-              Email: edd.philippe@gmail.com
+            <Typography variant="body2" gutterBottom>
+              <strong>Email :</strong> jadephilippe.chiropraxie@gmail.com
             </Typography>
           </Grid>
 

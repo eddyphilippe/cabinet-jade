@@ -51,11 +51,11 @@ const Contact = () => {
                   <Typography variant="body1" sx={{ mb: 1 }}>
                     <strong>Adresse:</strong> 63 Rue de Caen, 14480 Creully sur Seulles
                   </Typography>
-                  <Typography variant="body1" sx={{ mb: 1 }}>
-                    <strong>Téléphone:</strong> 0695112755
+                  <Typography variant="body1" gutterBottom>
+                    <strong>Téléphone :</strong> 06 12 34 56 78
                   </Typography>
-                  <Typography variant="body1" sx={{ mb: 1 }}>
-                    <strong>Email:</strong> edd.philippe@gmail.com
+                  <Typography variant="body1" gutterBottom>
+                    <strong>Email :</strong> jadephilippe.chiropraxie@gmail.com
                   </Typography>
                   <Typography variant="body1">
                     <strong>Horaires:</strong> Lun-Ven: 9h-19h | Sam: 9h-13h
