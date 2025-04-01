@@ -48,7 +48,10 @@ const Home = () => {
                 Jade Philippe
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Chiropracteure diplômée de l'Institut Franco-Européen de Chiropraxie (IFEC)
+                Chiropracteure diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>)
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+                Formation complémentaire en <strong>prise en charge du sportif</strong> et en <strong>Dry Needling</strong>
               </Typography>
             </Box>
           </Grid>
