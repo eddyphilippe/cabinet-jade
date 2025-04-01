@@ -62,11 +62,11 @@ const Home = () => {
             </Typography>
             
             <Typography paragraph>
-              Le travail d'un chiropracteur consiste à diagnostiquer, traiter et prévenir les troubles neuro-musculo-squelettiques, en particulier ceux liés à la colonne vertébrale. Votre thérapeute utilise la manipulation manuelle des articulations, principalement la colonne vertébrale, pour améliorer leur mobilité, soulager la douleur et optimiser le fonctionnement du système nerveux. Cela peut inclure des ajustements vertébraux, des conseils sur la posture, des exercices de rééducation ainsi que des conseils sur le mode de vie.
+              Le travail d'un chiropracteur consiste à diagnostiquer, traiter et prévenir les troubles neuro-musculo-squelettiques, en particulier ceux liés à la colonne vertébrale. Votre thérapeute utilise la manipulation manuelle des articulations, principalement la colonne vertébrale, pour améliorer leur mobilité, soulager la douleur et optimiser le fonctionnement du système nerveux. Cela peut inclure des ajustements vertébraux, des conseils sur la posture, des exercices de rééducation ainsi que des conseils sur votre mode de vie.
             </Typography>
             
             <Typography paragraph>
-              Les chiropracteurs traitent des douleurs diverses, comme les douleurs lombaires, cervicales, les migraines, les douleurs articulaires et des troubles liés au stress et aux déséquilibres posturaux. Ils abordent souvent le corps de façon global, cherchant à améliorer le bien-être général du patient en se concentrant sur l'origine mécanique des douleurs.
+              Les chiropracteurs traitent des douleurs diverses comme les douleurs lombaires, cervicales, les migraines, les tendinopathies, les douleurs articulaires et les troubles liés au stress et aux déséquilibres posturaux. Ils abordent souvent le corps de façon global, cherchant à améliorer le bien-être général du patient en se concentrant sur l'origine mécanique des douleurs.
             </Typography>
             
             <Box sx={{ mt: 3 }}>
