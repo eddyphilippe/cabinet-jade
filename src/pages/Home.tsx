@@ -47,7 +47,7 @@ const Home = () => {
               <Typography variant="h5" gutterBottom>
                 Jade Philippe
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
                 Chiropracteure diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>)
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
