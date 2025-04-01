@@ -55,15 +55,15 @@ const Home = () => {
           
           <Grid item xs={12} md={8}>
             <Typography variant="h6" gutterBottom>
-              Parcours et Formations
+              Rôle du Chiropracteur
             </Typography>
             
             <Typography paragraph>
-              Après l'obtention de son diplôme à l'IFEC en 2023, Jade Philippe a complété sa formation par des certifications en chiropraxie sportive et en Dry Needing. Sa pratique est enrichie par une approche intégrative de la santé.
+              Le travail d'un chiropracteur consiste à diagnostiquer, traiter et prévenir les troubles neuro-musculo-squelettiques, en particulier ceux liés à la colonne vertébrale. Votre thérapeute utilise la manipulation manuelle des articulations, principalement la colonne vertébrale, pour améliorer leur mobilité, soulager la douleur et optimiser le fonctionnement du système nerveux. Cela peut inclure des ajustements vertébraux, des conseils sur la posture, des exercices de rééducation ainsi que des conseils sur le mode de vie.
             </Typography>
             
             <Typography paragraph>
-              Sa philosophie de soins repose sur la nécessité d'une prise en charge individualisée. Elle considère qu'un réalignement correcte de la structure vertébrale est la pierre angulaire qui permettra la mise en place d'un plan de réhabilitation adapté, menant à une optimisation de sa locomotricité et de son bien-être.
+              Les chiropracteurs traitent des douleurs diverses, comme les douleurs lombaires, cervicales, les migraines, les douleurs articulaires et des troubles liés au stress et aux déséquilibres posturaux. Ils abordent souvent le corps de façon global, cherchant à améliorer le bien-être général du patient en se concentrant sur l'origine mécanique des douleurs.
             </Typography>
             
             <Box sx={{ mt: 3 }}>
