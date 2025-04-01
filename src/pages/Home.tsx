@@ -17,13 +17,12 @@ const Home = () => {
       />
 
       <Section
-        title="Bienvenue au Cabinet Jade Philippe"
-        subtitle="Un espace dédié à votre santé vertébrale et à votre bien-être"
+        title="Bienvenue dans un espace dédié à votre santé vertébrale et à votre bien-être"
         centered
         background="white"
       >
         <Typography paragraph>
-          Le Cabinet de Jade vous accueille dans un espace calme et apaisant pour prendre soin de votre santé.
+          Votre thérapeute vous accueille dans un espace calme et apaisant pour prendre soin de votre santé.
           Notre approche de la chiropraxie est globale, douce et adaptée à chaque patient.
         </Typography>
       </Section>
