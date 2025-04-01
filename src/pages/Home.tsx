@@ -82,8 +82,9 @@ const Home = () => {
               <Button 
                 variant="outlined" 
                 color="primary"
-                component={Link}
-                to="/contact"
+                href="https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Prendre Rendez-vous
               </Button>
