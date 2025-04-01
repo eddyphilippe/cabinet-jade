@@ -58,7 +58,7 @@ const Home = () => {
           
           <Grid item xs={12} md={8}>
             <Typography variant="h6" gutterBottom>
-              Rôle du Chiropracteur
+              Rôle de votre Chiropracteure
             </Typography>
             
             <Typography paragraph>
