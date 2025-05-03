@@ -37,7 +37,6 @@ const pages = [
   { name: 'Accueil', path: '/' },
   { name: 'Le Cabinet', path: '/about' },
   { name: 'Soins Proposés', path: '/services' },
-  { name: 'Équipement', path: '/equipment' },
   { name: 'Tarifs', path: '/pricing' },
   { name: 'Contact', path: '/contact' },
 ];

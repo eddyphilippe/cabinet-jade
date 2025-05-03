@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import SoinsProposés from './pages/SoinsProposés';
-import Equipment from './pages/Equipment';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -79,7 +78,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<SoinsProposés />} />
-            <Route path="/equipment" element={<Equipment />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
