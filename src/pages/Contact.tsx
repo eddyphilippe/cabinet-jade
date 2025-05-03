@@ -17,7 +17,7 @@ const Contact = () => {
     <Box>
       <HeroBanner
         title="Contactez-Nous"
-        subtitle="Nous sommes à votre écoute pour répondre à vos questions"
+        subtitle="À votre écoute pour répondre à vos questions"
         backgroundImage={cabinetImage}
       />
 
@@ -25,7 +25,7 @@ const Contact = () => {
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <Typography variant="h4" component="h2" gutterBottom>
-              Nous Sommes à Votre Écoute
+              À Votre Écoute
             </Typography>
           </Grid>
           
@@ -35,7 +35,7 @@ const Contact = () => {
               pour prendre rendez-vous ou pour obtenir plus d'informations sur notre approche chiropratique.
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Notre équipe est disponible pour vous répondre du lundi au vendredi de 9h à 19h
+              Votre chiropracteure est disponible pour vous répondre du lundi au vendredi de 9h à 19h
               et le samedi de 9h à 13h.
             </Typography>
           </Grid>
