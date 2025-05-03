@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <Box>
       <HeroBanner
-        title="Cabinet de Chiropraxie"
+        title="Centre de Chiropraxie"
         subtitle="Jade Philippe"
         backgroundImage={cabinetImage}
       />

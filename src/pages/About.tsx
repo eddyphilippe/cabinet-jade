@@ -11,54 +11,43 @@ const About = () => {
   return (
     <Box>
       <HeroBanner
-        title=""
-        subtitle="Découvrez le Cabinet Jade Philippe et notre approche de la chiropraxie"
+        title="À Propos"
+        subtitle="Découvrez le Centre de Chiropraxie Jade Philippe et notre approche de la chiropraxie"
         backgroundImage={cabinetImage}
       />
 
       <Section
-        title="Notre Cabinet"
-        subtitle="Un espace dédié à votre santé et à votre bien-être"
-        centered
+        title="Notre Centre"
         background="white"
       >
         <Typography paragraph>
-          Le Cabinet Jade Philippe a été fondé avec une mission claire : offrir des soins de chiropraxie de qualité dans un environnement accueillant et professionnel. Notre cabinet allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
+          Le Centre de Chiropraxie Jade Philippe a été fondé avec une mission claire : offrir des soins de chiropraxie de qualité dans un environnement accueillant et professionnel. Notre centre allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
         </Typography>
-        
-        <Typography paragraph>
-          Situé à Creully sur Seulles, notre cabinet en rez-de-chaussée, vous offre un accès de plain-pied à proximité d'un parking dédié.
-        </Typography>
-      </Section>
 
-      <Section
-        background="jade-light"
-      >
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" gutterBottom color="primary.main">
-              Notre Espace
-            </Typography>
-            <Typography paragraph>
-              Découvrez notre cabinet lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
-            </Typography>
-            <Typography paragraph>
-              Équipé de matériel moderne et performant, le Cabinet Jade Philippe vous garantit des soins de qualité dans les meilleures conditions.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Box
-              component="img"
-              src={cabinetImage}
-              alt="Photo du Cabinet Jade"
-              sx={{
-                width: '100%',
-                borderRadius: '8px',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-              }}
-            />
-          </Grid>
-        </Grid>
+        <Typography paragraph>
+          Situé à Creully sur Seulles, notre centre en rez-de-chaussée, vous offre un accès de plain-pied à proximité d'un parking dédié.
+        </Typography>
+
+        <Box sx={{ mt: 4, mb: 4 }}>
+          <Typography variant="h6" gutterBottom>
+            Notre Espace
+          </Typography>
+          <Typography paragraph>
+            Découvrez notre centre lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
+          </Typography>
+          <Typography paragraph>
+            Équipé de matériel moderne et performant, le Centre de Chiropraxie Jade Philippe vous garantit des soins de qualité dans les meilleures conditions.
+          </Typography>
+        </Box>
+
+        <Box sx={{ mt: 4, mb: 4 }}>
+          <Typography variant="h6" gutterBottom>
+            Localisation
+          </Typography>
+          <Typography paragraph>
+            Le Centre de Chiropraxie Jade Philippe est situé à Creully sur Seulles, 63 rue de Caen, parking dédié.
+          </Typography>
+        </Box>
       </Section>
 
       <Section
@@ -67,7 +56,7 @@ const About = () => {
         centered
       >
         <Typography paragraph>
-          Le Cabinet Jade Philippe est situé à Creully sur Seulles, 63 rue de Caen, parking dédié.
+          Le Centre de Chiropraxie Jade Philippe est situé à Creully sur Seulles, 63 rue de Caen, parking dédié.
         </Typography>
         
         <Box sx={{ 
@@ -85,7 +74,7 @@ const About = () => {
             style={{ border: 0 }} 
             allowFullScreen={false} 
             loading="lazy"
-            title="Localisation du Cabinet Jade Philippe"
+            title="Localisation du Centre de Chiropraxie Jade Philippe"
           ></iframe>
         </Box>
       </Section>

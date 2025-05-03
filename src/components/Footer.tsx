@@ -41,11 +41,11 @@ const Footer = () => {
         <Grid container spacing={4}>
           {/* About */}
           <Grid item xs={12} md={4}>
-            <Typography variant="h6" component="div" gutterBottom fontWeight={600}>
-              Cabinet Jade Philippe
+            <Typography variant="h6" gutterBottom>
+              Centre de Chiropraxie Jade Philippe
             </Typography>
-            <Typography variant="body2" sx={{ mb: 2, opacity: 0.8 }}>
-              Cabinet de chiropraxie dédié à la santé de votre système neuro-musculo-squelettique et à votre bien-être.
+            <Typography variant="body2" sx={{ opacity: 0.8 }}>
+              Centre de chiropraxie dédié à la santé de votre système neuro-musculo-squelettique et à votre bien-être.
             </Typography>
             <Typography variant="body2" gutterBottom>
               <strong>Email :</strong> jadephilippe.chiropraxie@gmail.com
@@ -119,8 +119,8 @@ const Footer = () => {
         <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)', my: 4 }} />
         
         <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'space-between' }, flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', textAlign: { xs: 'center', md: 'left' } }}>
-          <Typography variant="body2" sx={{ opacity: 0.7 }}>
-            © {currentYear} Cabinet Jade Philippe. Tous droits réservés.
+          <Typography variant="body2" sx={{ opacity: 0.8 }}>
+            © {currentYear} Centre de Chiropraxie Jade Philippe. Tous droits réservés.
           </Typography>
           <Typography variant="body2" sx={{ mt: { xs: 1, md: 0 }, opacity: 0.7 }}>
             Conçu et développé avec soin pour votre bien-être
