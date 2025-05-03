@@ -6,7 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
-import jadePhoto from '../assets/images/jade-philippe.jpg';
+import jadePhilippeImage from '../assets/images/jade-philippe.jpg';
 
 const Home = () => {
   return (
@@ -42,7 +42,7 @@ const Home = () => {
                   margin: '0 auto 16px auto',
                   bgcolor: 'primary.main' 
                 }}
-                src={jadePhoto}
+                src={jadePhilippeImage}
                 alt="Jade Philippe"
               />
               <Typography variant="h5" gutterBottom>
