@@ -21,7 +21,9 @@ const Contact = () => {
         backgroundImage={cabinetImage}
       />
 
-      <Section>
+      <Section
+        title="Votre Chiropracteure"
+      >
         <Grid container spacing={4}>
           
           <Grid item xs={12} md={6}>

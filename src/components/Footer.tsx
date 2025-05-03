@@ -27,11 +27,6 @@ const Footer = () => {
       { name: 'Thérapie des Tissus Mous', path: '/services#therapie-tissus-mous' },
       { name: 'Dry Needling', path: '/services#dry-needing' },
       { name: 'Réhabilitation', path: '/services#rehabilitation' }
-    ],
-    legal: [
-      { name: 'Mentions Légales', path: '/legal' },
-      { name: 'Politique de Confidentialité', path: '/privacy' },
-      { name: 'CGU', path: '/terms' }
     ]
   };
 
@@ -80,27 +75,6 @@ const Footer = () => {
             </Typography>
             <Stack spacing={1}>
               {footerLinks.services.map((link) => (
-                <MuiLink 
-                  key={link.name}
-                  component={Link}
-                  to={link.path}
-                  color="inherit"
-                  underline="hover"
-                  sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}
-                >
-                  {link.name}
-                </MuiLink>
-              ))}
-            </Stack>
-          </Grid>
-
-          {/* Legal */}
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="subtitle1" component="div" gutterBottom fontWeight={600}>
-              Informations Légales
-            </Typography>
-            <Stack spacing={1}>
-              {footerLinks.legal.map((link) => (
                 <MuiLink 
                   key={link.name}
                   component={Link}
