@@ -14,18 +14,8 @@ const Equipment = () => {
       image: cabinetImage
     },
     {
-      title: 'Appareil à Ultrasons',
-      description: 'Utilise des ondes sonores haute fréquence pour traiter les douleurs musculaires, améliorer la circulation et favoriser la guérison des tissus profonds.',
-      image: cabinetImage
-    },
-    {
-      title: 'Électrothérapie',
-      description: 'Système de stimulation électrique qui aide à soulager la douleur, réduire l\'inflammation et favoriser la récupération musculaire après une blessure.',
-      image: cabinetImage
-    },
-    {
-      title: 'Système d\'Imagerie Posturale',
-      description: 'Technologie avancée qui permet d\'analyser votre posture avec précision pour identifier les déséquilibres et suivre vos progrès au fil du temps.',
+      title: 'Appareil à Onde de Choc',
+      description: 'Technologie thérapeutique innovante utilisant des ondes acoustiques à haute énergie pour stimuler les mécanismes naturels de guérison du corps. Particulièrement efficace pour traiter les tendinopathies chroniques, les points de déclenchement musculaires et accélérer la réparation des tissus endommagés.',
       image: cabinetImage
     }
   ];
