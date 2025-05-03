@@ -33,7 +33,7 @@ const Footer = () => {
   return (
     <Box component="footer" sx={{ bgcolor: 'primary.dark', color: 'white', py: 6, mt: 'auto' }}>
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
+        <Grid container spacing={4} justifyContent="center">
           {/* About */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>
