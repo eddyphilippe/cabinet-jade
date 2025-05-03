@@ -6,7 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
-import jadePhilippeImage from '../assets/images/jade-philippe-new.jpg';
+import jadePhilippeImage from '../assets/images/jade-philippe-chiro.jpg';
 
 const About = () => {
   return (
