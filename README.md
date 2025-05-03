@@ -63,3 +63,6 @@ Ce projet est distribué sous licence MIT.
 ## Crédits
 
 Créé pour Cabinet Jade, 2023. Tous droits réservés.
+
+## Mise à jour
+Dernière mise à jour: 3 mai 2024 - Mise à jour de la photo de Jade Philippe.
