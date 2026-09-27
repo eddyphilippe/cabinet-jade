@@ -1,0 +1,71 @@
+---
+description: Contexte et règles de travail pour le site du cabinet de chiropraxie de Jade Philippe
+alwaysApply: true
+---
+
+# Site du cabinet de Jade Philippe
+
+Site professionnel d'un **praticien de santé**. Les erreurs ici ont des conséquences
+réelles pour une patientèle. Prudence avant vitesse.
+
+## Technologie
+
+React 18 + TypeScript 4.9, Material UI 5, React Router 6, Framer Motion.
+Outillage : Create React App (`react-scripts` 5.0.1), npm. Node 22 LTS.
+
+Node est installé en keg-only via Homebrew. Si `node` est introuvable :
+`export PATH="/opt/homebrew/opt/node@22/bin:$PATH"`
+
+## Organisation
+
+- `src/config/` — source unique de vérité des coordonnées et du SEO
+- `src/pages/` — une page par route, déclarées dans `src/App.tsx`
+- `src/components/` — `Header`, `Footer`, `HeroBanner`, `Section`
+- `docs/` — documentation de maintenance (`*.md`) **et** ancien build GitHub Pages
+- `build/` — sortie de `npm run build`, non versionnée
+
+## Coordonnées du cabinet
+
+Toujours lire `src/config/cabinet.ts`. **Ne jamais écrire une coordonnée en dur**
+dans un composant, et ne jamais en inventer une.
+
+Jade Philippe, chiropracteur — 63 Rue de Caen, 14480 Creully-sur-Seulles.
+Email `jadephilippe.chiropraxie@gmail.com`. Rendez-vous via Doctolib.
+
+Le téléphone `06 12 34 56 78` trouvé dans l'historique est **factice** : ne jamais
+le publier. Le numéro `0695112755` de l'historique appartient au développeur, pas
+à Jade. Toute donnée non confirmée reste marquée `À VALIDER` et n'est pas affichée.
+
+## Contenu médical
+
+Ne jamais inventer ni amplifier : indication, bénéfice thérapeutique, résultat,
+taux de réussite, témoignage, diplôme, ancienneté. Ne pas transformer une
+formulation prudente en promesse de guérison. Toute réécriture d'un texte de
+santé est soumise à l'utilisateur **avant** publication.
+
+Ne pas réintroduire les équipements retirés au commit `5352ebf`
+(électrothérapie, imagerie posturale) sans demande explicite.
+
+## Déploiement
+
+Voir `docs/DEPLOIEMENT.md`. Hébergeur cible : Vercel. Dépôt
+`github.com/eddyphilippe/cabinet-jade`, branche `main`. Domaine **à confirmer**.
+Ne supprimer aucune configuration de domaine ou d'hébergement sans validation.
+
+## SEO
+
+Zones géographiques et métadonnées centralisées dans `src/config/seo.ts`.
+Pas de keyword stuffing, pas de pages locales dupliquées en série, pas de faux
+avis. Un titre et une description propres à chaque page.
+
+## Avant toute intervention
+
+1. Lire ce contexte et `docs/MODIFICATIONS.md`.
+2. Vérifier `git status` ; créer un point de reprise avant une grosse modification.
+3. Ne supprimer aucune fonctionnalité sans raison explicite.
+4. Conserver l'identité visuelle (thème défini dans `src/App.tsx`) sauf demande.
+5. Préférer les modifications simples et maintenables aux refontes.
+6. Exécuter `npm run build` avant de proposer une mise en production.
+7. Documenter tout changement important dans `docs/MODIFICATIONS.md`.
+8. Présenter clairement les fichiers modifiés et ce qui a changé.
+9. Jamais de `git push --force` sans demande explicite.

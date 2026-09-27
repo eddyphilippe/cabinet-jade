@@ -1,68 +1,117 @@
-# Cabinet Jade - Site Web Chiropractie
+# Cabinet de chiropraxie Jade Philippe — site internet
 
-Un site web élégant et professionnel pour un cabinet de chiropractie basé en France.
+Site vitrine du cabinet de **Jade Philippe**, chiropracteur à
+**Creully-sur-Seulles** (Calvados, Normandie). Prise de rendez-vous via Doctolib.
 
-## Caractéristiques
+> **Nouveau sur ce projet ?** Lire `docs/INSTALLATION.md` pour installer, puis
+> `docs/MAINTENANCE.md` pour modifier quoi que ce soit. Les deux se lisent en dix
+> minutes et évitent les erreurs coûteuses.
 
-- Design responsive adapté à tous les appareils
-- Esthétique zen et médicale avec une palette de couleurs apaisantes
-- Animations subtiles pour une expérience utilisateur optimale
-- Présentation détaillée des services chiropratiques
-- Informations sur l'équipement et les techniques utilisées
-- Grille tarifaire transparente
-- Formulaire de contact et intégration Google Maps
-- Compatible avec la prise de rendez-vous en ligne
+## Technologie
 
-## Structure du Site
+React 18 + TypeScript 4.9, Material UI 5, React Router 6, Framer Motion.
+Outillage Create React App (`react-scripts` 5.0.1), npm. Node 22 LTS requis.
 
-- **Page d'accueil**: Présentation du cabinet avec appel à l'action
-- **À propos**: Présentation du praticien, philosophie du cabinet
-- **Services/Techniques**: Détail des techniques chiropratiques proposées
-- **Équipement**: Présentation de la table de chiropractie et autres équipements
-- **Tarifs**: Grille tarifaire claire pour les différentes prestations
-- **Contact**: Formulaire de contact et informations pratiques
+## Installation
 
-## Technologies Utilisées
+```bash
+git clone https://github.com/eddyphilippe/cabinet-jade.git
+cd cabinet-jade
+npm install
+```
 
-- React.js
-- TypeScript
-- Material-UI pour les composants d'interface
-- Framer Motion pour les animations
-- React Router pour la navigation
-- React Icons pour les icônes
+Détails et installation de Node : `docs/INSTALLATION.md`.
 
-## Installation et Démarrage
+## Développement local
 
-1. Clonez ce dépôt
-2. Installez les dépendances: `npm install`
-3. Démarrez l'application en mode développement: `npm start`
-4. Ouvrez [http://localhost:3000](http://localhost:3000) pour voir le site dans votre navigateur
+```bash
+npm start     # http://localhost:3000, rechargement automatique
+```
+
+## Build
+
+```bash
+npm run build     # génère build/
+```
+
+À exécuter systématiquement **avant** de pousser du code.
 
 ## Déploiement
 
-Pour construire l'application pour la production:
+Hébergeur cible **Vercel**, branche `main` : tout `git push` déclenche la mise en
+production. Ne pas utiliser `npm run deploy`, hérité de l'ancien hébergement.
+
+⚠️ Une ancienne page **GitHub Pages** sert encore un build du 22 mars 2025 à
+l'adresse `eddyphilippe.github.io/cabinet-jade`, avec des coordonnées erronées.
+Procédure de neutralisation dans `docs/DEPLOIEMENT.md`.
+
+## Documentation
+
+| Fichier | Contenu |
+|---|---|
+| `docs/INSTALLATION.md` | prérequis, installation, commandes du projet |
+| `docs/DEPLOIEMENT.md` | hébergement, mise en ligne, retour arrière |
+| `docs/MAINTENANCE.md` | procédure de modification pas à pas |
+| `docs/SEO_LOCAL.md` | audit SEO, Search Console, fiche Google |
+| `docs/MODIFICATIONS.md` | journal des changements et de leurs raisons |
+| `docs/SAUVEGARDE.md` | sauvegarde, restauration, anciennes versions |
+| `.cursor/rules/` | règles permanentes pour l'assistant Cursor |
+
+## Structure du projet
 
 ```
-npm run build
+src/
+  config/       coordonnées du cabinet et paramètres SEO (source unique de vérité)
+  pages/        une page par route, déclarées dans App.tsx
+  components/   Header, Footer, HeroBanner, Section
+  assets/       images
+  styles/       thème et styles globaux
+public/         index.html, robots.txt, manifest.json
+docs/           documentation *.md + ancien build GitHub Pages (à archiver)
 ```
 
-Les fichiers prêts pour le déploiement seront générés dans le dossier `build`.
+Routes : `/` · `/about` (Le Cabinet) · `/services` (Soins proposés) ·
+`/equipment` · `/pricing` (Tarifs) · `/contact`
 
-## Personnalisation
+## GitHub
 
-Vous pouvez personnaliser le site en modifiant:
+https://github.com/eddyphilippe/cabinet-jade — branche de production : `main`.
 
-- Les informations du cabinet dans les composants correspondants
-- Les couleurs et le thème dans `src/styles/theme.ts`
-- Les images dans le dossier `src/assets/images`
+## Maintenance
 
-## Licence
+Toute modification suit la procédure de `docs/MAINTENANCE.md` : vérifier Git,
+tester en local sur ordinateur **et** mobile, builder, committer, pousser,
+contrôler le site public.
 
-Ce projet est distribué sous licence MIT.
+Coordonnées, horaires et lien Doctolib se modifient dans **un seul fichier** :
+`src/config/cabinet.ts`. Ne jamais les écrire en dur dans une page.
 
-## Crédits
+## SEO
 
-Créé pour Cabinet Jade, 2023. Tous droits réservés.
+Voir `docs/SEO_LOCAL.md`. Principe : du contenu utile et lisible pour les
+patients, pas de bourrage de mots-clés, pas de pages locales dupliquées, pas de
+faux avis. Aucun classement Google ne peut être garanti.
 
-## Mise à jour
-Dernière mise à jour: 3 mai 2024 - Mise à jour de la photo de Jade Philippe.
+Ce site est celui d'un professionnel de santé : ne jamais inventer d'indication
+médicale, de bénéfice thérapeutique, de résultat, de témoignage ni de diplôme.
+
+## Informations nécessitant encore validation
+
+| Information | État |
+|---|---|
+| **Téléphone** | ❌ Aucun numéro valide. `06 12 34 56 78` est factice, `0695112755` appartient au développeur. Non publié tant qu'il n'est pas confirmé. |
+| **Nom de domaine** | ❔ À confirmer. Aucun `CNAME`, aucune URL absolue dans le projet. |
+| **Hébergement actif** | ❔ Vercel à confirmer ; GitHub Pages encore en ligne. |
+| « Dr. Jade Philippe », « Chiropracteure D.C. » | ❔ Mentions non vérifiées sur `/about`. |
+| « pratique depuis plus de 12 ans » | ❔ Ancienneté non vérifiée, à confirmer ou retirer. |
+| Tarifs (60 € / 50 € / 60 €) | ❔ À confirmer auprès de Jade. |
+| Horaires (Lun-Ven 9h-19h, Sam 9h-13h) | ❔ À confirmer auprès de Jade. |
+| Communes de la zone desservie | ❔ À définir avec Jade ; ne pas inventer. |
+
+## Informations vérifiées
+
+- **Adresse** : 63 Rue de Caen, 14480 Creully-sur-Seulles, France
+- **Email** : jadephilippe.chiropraxie@gmail.com
+- **Doctolib** : https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe (lien testé)
+- **Formation** : diplômée de l'IFEC (Institut Franco-Européen de Chiropraxie),
+  formations complémentaires en prise en charge du sportif et en Dry Needling
