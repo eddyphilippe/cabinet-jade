@@ -31,7 +31,7 @@ const Home = () => {
       >
         <Typography paragraph>
           Votre thérapeute vous accueille dans un espace calme et apaisant pour prendre soin de votre santé.
-          Son approche de la chiropraxie est globale, douce et adaptée à chaque patient.
+          L'approche de la chiropraxie est globale, douce et adaptée à chaque patient.
         </Typography>
 
         <Typography paragraph>
