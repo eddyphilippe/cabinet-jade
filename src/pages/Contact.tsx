@@ -18,6 +18,7 @@ import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import {
+  addressInSentence,
   cabinet,
   fullAddress,
   openingHoursSentence,
@@ -104,7 +105,7 @@ const Contact = () => {
 
       <Section title="Accès au cabinet" background="light">
         <Typography paragraph>
-          Le cabinet se situe {cabinet.address.toLowerCase()} à {cabinet.city},
+          Le cabinet se situe {addressInSentence} à {cabinet.city},
           dans le {cabinet.department}. Il est installé en rez-de-chaussée, avec
           un accès de plain-pied et un parking dédié.
         </Typography>

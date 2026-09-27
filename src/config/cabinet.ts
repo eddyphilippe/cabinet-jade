@@ -135,6 +135,17 @@ export const cabinet: Cabinet = {
 /** Adresse sur une seule ligne : « 63 Rue de Caen, 14480 Creully-sur-Seulles ». */
 export const fullAddress = `${cabinet.address}, ${cabinet.postalCode} ${cabinet.city}`;
 
+/**
+ * Adresse telle qu'on l'écrit au fil d'une phrase : « 63 rue de Caen ».
+ *
+ * Seul le type de voie passe en minuscule ; le nom propre garde sa majuscule.
+ * Un `toLowerCase()` sur l'adresse entière donnerait « 63 rue de caen ».
+ */
+export const addressInSentence = cabinet.address.replace(
+  /\b(Rue|Avenue|Boulevard|Place|Chemin|Route|Impasse|Allée|Quai)\b/,
+  (streetType) => streetType.toLowerCase()
+);
+
 /** Horaires résumés : « Du lundi au vendredi : 9h-19h | Samedi : 9h-13h ». */
 export const openingHoursSummary = cabinet.openingHours
   .map((h) => `${h.label} : ${formatHour(h.opens)}-${formatHour(h.closes)}`)

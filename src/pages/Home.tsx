@@ -9,7 +9,7 @@ import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import jadePhilippeImage from '../assets/images/jade-philippe-chiro.jpg';
-import { cabinet } from '../config/cabinet';
+import { addressInSentence, cabinet } from '../config/cabinet';
 import { seo } from '../config/seo';
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
         </Typography>
 
         <Typography paragraph>
-          Le cabinet se situe {cabinet.address.toLowerCase()} à {cabinet.city},
+          Le cabinet se situe {addressInSentence} à {cabinet.city},
           dans le {cabinet.department}, en {cabinet.region}. Il est installé en
           rez-de-chaussée, avec un accès de plain-pied et un parking dédié.
         </Typography>

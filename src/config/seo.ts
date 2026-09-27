@@ -15,7 +15,7 @@
  * le titre, 155 pour la description. Au-delà, le texte est tronqué.
  */
 
-import { cabinet } from './cabinet';
+import { addressInSentence, cabinet } from './cabinet';
 
 export interface PageSeo {
   /** Chemin de la route, tel que déclaré dans App.tsx. */
@@ -84,7 +84,7 @@ export const seo = {
     contact: {
       path: '/contact',
       title: `Contact et rendez-vous | ${cabinet.practitioner}, chiropracteur`,
-      description: `Adresse, horaires et prise de rendez-vous en ligne du cabinet de chiropraxie de ${cabinet.practitioner}, ${cabinet.address.toLowerCase()} à ${areas.city}.`,
+      description: `Adresse, horaires et prise de rendez-vous en ligne du cabinet de chiropraxie de ${cabinet.practitioner}, ${addressInSentence} à ${areas.city}.`,
     },
     notFound: {
       path: '*',
