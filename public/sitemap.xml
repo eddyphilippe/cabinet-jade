@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Liste des pages publiques indexables du site.
+
+  A METTRE A JOUR a chaque ajout ou suppression de page, en meme temps que
+  src/config/seo.ts et src/App.tsx. Ne jamais y faire figurer la page 404.
+
+  La date <lastmod> indique la derniere modification reelle du contenu de la
+  page. L'actualiser n'a d'interet que si la page a vraiment change.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jadephilippe-chiropraxie.fr</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://jadephilippe-chiropraxie.fr/about</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jadephilippe-chiropraxie.fr/services</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jadephilippe-chiropraxie.fr/contact</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jadephilippe-chiropraxie.fr/pricing</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jadephilippe-chiropraxie.fr/equipment</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+</urlset>

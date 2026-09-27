@@ -2,9 +2,13 @@ import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+import Seo from '../components/Seo';
+import { seo } from '../config/seo';
+
 const NotFound = () => {
   return (
     <Container maxWidth="md">
+      <Seo page={seo.pages.notFound} />
       <Box
         sx={{
           display: 'flex',

@@ -9,6 +9,7 @@ import {
 
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
+import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import {
@@ -17,10 +18,12 @@ import {
   openingHoursSentence,
   openingHoursSummary,
 } from '../config/cabinet';
+import { seo } from '../config/seo';
 
 const Contact = () => {
   return (
     <Box>
+      <Seo page={seo.pages.contact} />
       <HeroBanner
         title="Contactez-Nous"
         subtitle="À votre écoute pour répondre à vos questions"

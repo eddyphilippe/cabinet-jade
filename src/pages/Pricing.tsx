@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
+import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
+import { seo } from '../config/seo';
 
 const Pricing = () => {
   const pricingPlans = [
@@ -32,7 +34,7 @@ const Pricing = () => {
       ]
     },
     {
-      title: 'Dry Needing',
+      title: 'Dry Needling',
       price: '60€',
       description: 'Technique spécifique pour la douleur aiguë',
       features: [
@@ -46,6 +48,7 @@ const Pricing = () => {
 
   return (
     <Box>
+      <Seo page={seo.pages.pricing} />
       <HeroBanner
         title="Nos Tarifs"
         subtitle="Des tarifs transparents pour vos soins de chiropraxie"

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
+import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import { cabinet } from '../config/cabinet';
+import { seo } from '../config/seo';
 
 const SoinsProposés = () => {
   const services = [
@@ -37,10 +39,10 @@ const SoinsProposés = () => {
       ]
     },
     {
-      id: 'dry-needing',
-      title: 'Dry Needing',
+      id: 'dry-needling',
+      title: 'Dry Needling',
       description: 'Technique utilisant des aiguilles fines pour cibler les points de tension musculaires et libérer les douleurs.',
-      longDescription: "Le Dry Needing est une technique précise qui consiste à insérer des aiguilles fines dans les points gâchettes musculaires (trigger points) pour soulager la douleur et restaurer la fonction musculaire. Cette approche est particulièrement efficace pour le traitement du lumbago en phase aiguë ou pour les douleurs myofasciales chroniques.",
+      longDescription: "Le Dry Needling est une technique précise qui consiste à insérer des aiguilles fines dans les points gâchettes musculaires (trigger points) pour soulager la douleur et restaurer la fonction musculaire. Cette approche est particulièrement efficace pour le traitement du lumbago en phase aiguë ou pour les douleurs myofasciales chroniques.",
       benefits: [
         'Libération des points de tension musculaire',
         'Diminution rapide de la douleur',
@@ -79,6 +81,7 @@ const SoinsProposés = () => {
 
   return (
     <Box>
+      <Seo page={seo.pages.services} />
       <HeroBanner
         title="Soins Proposés"
         subtitle={`Découvrez nos approches thérapeutiques au ${cabinet.shortName}`}
@@ -98,7 +101,7 @@ const SoinsProposés = () => {
           {services.map((service) => (
             <Grid item xs={12} sm={6} md={6} lg={12/5} key={service.id}>
               <Link 
-                to={`#${service.id}`} 
+                to={`/services#${service.id}`} 
                 style={{ textDecoration: 'none' }}
               >
                 <Box sx={{ 

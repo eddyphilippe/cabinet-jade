@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom';
 
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
+import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import jadePhilippeImage from '../assets/images/jade-philippe-chiro.jpg';
 import { cabinet } from '../config/cabinet';
+import { seo } from '../config/seo';
 
 const About = () => {
   return (
     <Box>
+      <Seo page={seo.pages.about} />
       <HeroBanner
         title="À Propos"
         subtitle={`Découvrez le ${cabinet.name} et notre approche de la chiropraxie`}

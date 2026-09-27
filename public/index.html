@@ -1,43 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#219ebc" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!--
+      Titre et description de la page d'accueil. Les autres pages les
+      remplacent a l'affichage via le composant src/components/Seo.tsx, qui
+      lit src/config/seo.ts.
+    -->
+    <title>Chiropracteur à Creully-sur-Seulles | Jade Philippe</title>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Jade Philippe, chiropracteur à Creully-sur-Seulles dans le Calvados. Cabinet de plain-pied avec parking, rendez-vous en ligne."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="canonical" href="https://jadephilippe-chiropraxie.fr" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
+    <!--
+      Apercu lors d'un partage sur une messagerie ou un reseau social.
+      Ces balises restent ecrites ici, et non dans le composant Seo : les
+      robots des messageries n'executent pas le JavaScript.
     -->
-    <title>React App</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Centre de Chiropraxie Jade Philippe" />
+    <meta property="og:title" content="Chiropracteur à Creully-sur-Seulles | Jade Philippe" />
+    <meta
+      property="og:description"
+      content="Jade Philippe, chiropracteur à Creully-sur-Seulles dans le Calvados. Cabinet de plain-pied avec parking, rendez-vous en ligne."
+    />
+    <meta property="og:url" content="https://jadephilippe-chiropraxie.fr" />
+    <meta property="og:image" content="https://jadephilippe-chiropraxie.fr/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Salle de soins du cabinet de chiropraxie de Jade Philippe" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--
+      Donnees structurees de l'etablissement, lues par Google.
+
+      /!\ A TENIR SYNCHRONISE A LA MAIN avec src/config/cabinet.ts.
+      Ce bloc est volontairement statique : injecte par React, il serait
+      moins fiablement lu. Toute modification d'adresse, d'email ou
+      d'horaires doit etre reportee ici.
+
+      Ne jamais ajouter :
+        - "telephone" tant que le numero n'est pas valide
+        - "aggregateRating" ou "review" : inventer une note ou un avis est une
+          violation des regles de Google et une tromperie envers les patients
+
+      Verifier apres toute modification :
+      https://search.google.com/test/rich-results
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Chiropractic",
+        "name": "Centre de Chiropraxie Jade Philippe",
+        "url": "https://jadephilippe-chiropraxie.fr",
+        "image": "https://jadephilippe-chiropraxie.fr/og-image.jpg",
+        "email": "jadephilippe.chiropraxie@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "63 Rue de Caen",
+          "postalCode": "14480",
+          "addressLocality": "Creully-sur-Seulles",
+          "addressRegion": "Calvados",
+          "addressCountry": "FR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday"],
+            "opens": "09:00",
+            "closes": "13:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      Ce site nécessite JavaScript pour fonctionner. Vous pouvez joindre le
+      Centre de Chiropraxie Jade Philippe par email à
+      jadephilippe.chiropraxie@gmail.com, ou vous rendre au 63 Rue de Caen,
+      14480 Creully-sur-Seulles.
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

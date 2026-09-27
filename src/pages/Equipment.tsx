@@ -3,8 +3,10 @@ import { Box, Typography, Grid, Card, CardContent, CardMedia } from '@mui/materi
 
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
+import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
+import { seo } from '../config/seo';
 
 const Equipment = () => {
   const equipmentList = [
@@ -22,6 +24,7 @@ const Equipment = () => {
 
   return (
     <Box>
+      <Seo page={seo.pages.equipment} />
       <HeroBanner
         title="Notre Équipement"
         subtitle="Des technologies modernes au service de votre santé"
