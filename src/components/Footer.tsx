@@ -28,6 +28,7 @@ const Footer = () => {
       { name: 'Chiropraxie Générale', path: '/services#chiropraxie-generale' },
       { name: 'Thérapie des Tissus Mous', path: '/services#therapie-tissus-mous' },
       { name: 'Dry Needling', path: '/services#dry-needling' },
+      { name: 'Ondes de Choc', path: '/services#ondes-de-choc' },
       { name: 'Réhabilitation', path: '/services#rehabilitation' }
     ]
   };

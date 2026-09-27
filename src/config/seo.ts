@@ -69,7 +69,7 @@ export const seo = {
     services: {
       path: '/services',
       title: `Soins de chiropraxie | ${cabinet.shortName}`,
-      description: `Chiropraxie générale, thérapie des tissus mous, Dry Needling, chiropraxie sportive et réhabilitation au cabinet de ${cabinet.practitioner} à ${areas.city}.`,
+      description: `Chiropraxie générale, thérapie des tissus mous, Dry Needling, ondes de choc et réhabilitation au cabinet de ${cabinet.practitioner} à ${areas.city}.`,
     },
     equipment: {
       path: '/equipment',

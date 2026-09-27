@@ -52,6 +52,18 @@ const SoinsProposés = () => {
       ]
     },
     {
+      id: 'ondes-de-choc',
+      title: 'Ondes de Choc',
+      description: 'Ondes acoustiques appliquées localement, en complément des techniques manuelles.',
+      longDescription: "La thérapie par ondes de choc utilise des ondes acoustiques à haute énergie appliquées localement à l'aide d'un appareil dédié. Elle est proposée au cabinet en complément des ajustements et de la thérapie des tissus mous, notamment dans la prise en charge des tendinopathies chroniques et des points de déclenchement musculaires.",
+      benefits: [
+        'Prise en charge des tendinopathies chroniques',
+        'Traitement des points de déclenchement musculaires',
+        'Application locale et ciblée',
+        'Complémentaire aux ajustements de chiropraxie'
+      ]
+    },
+    {
       id: 'chiropraxie-sportive',
       title: 'Chiropraxie Sportive',
       description: 'Soins spécialisés pour les sportifs afin d\'optimiser leurs performances et accélérer leur récupération.',
@@ -99,7 +111,7 @@ const SoinsProposés = () => {
         
         <Grid container spacing={4} sx={{ mt: 4 }}>
           {services.map((service) => (
-            <Grid item xs={12} sm={6} md={6} lg={12/5} key={service.id}>
+            <Grid item xs={12} sm={6} md={4} key={service.id}>
               <Link 
                 to={`/services#${service.id}`} 
                 style={{ textDecoration: 'none' }}
