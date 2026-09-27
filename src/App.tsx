@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 // Composants
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollManager from './components/ScrollManager';
 
 // Pages
 import Home from './pages/Home';
@@ -73,6 +74,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
+        <ScrollManager />
         <Header />
         <main>
           <Routes>

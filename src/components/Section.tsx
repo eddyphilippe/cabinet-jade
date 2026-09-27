@@ -45,10 +45,13 @@ const Section: React.FC<SectionProps> = ({
 
   return (
     <Box
+      id={id}
       sx={{
         py,
         bgcolor: getBgColor(),
-        color: background === 'primary' || background === 'secondary' ? 'white' : 'text.primary'
+        color: background === 'primary' || background === 'secondary' ? 'white' : 'text.primary',
+        // Compense l'en-tête fixe, qui masquerait le titre au saut vers une ancre.
+        scrollMarginTop: '80px'
       }}
     >
       <Container maxWidth={maxWidth}>
