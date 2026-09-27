@@ -9,30 +9,31 @@ avis. Google indique que le classement local dépend de la **pertinence**, de la
 **distance** et de la **notoriété** : les deux premières se travaillent sur le
 site, la troisième se gagne hors du site.
 
-## Audit technique — état au 27 septembre 2026
+## Audit technique — relevé du 27 septembre 2026
 
-Relevé avant travaux, à mettre à jour au fur et à mesure des corrections.
+Les cases cochées ont été traitées le jour même. Celles qui restent ouvertes
+sont le programme de travail.
 
-### Base HTML manquante
+### Base HTML
 
-- [ ] `public/index.html` déclare `lang="en"` pour un site entièrement en français
-- [ ] Titre de l'onglet : « React App »
-- [ ] Meta description : « Web site created using create-react-app »
-- [ ] `manifest.json` nommé « Create React App Sample »
-- [ ] Aucun titre ni description propre à chaque page (pas de `react-helmet`)
-- [ ] Aucune balise canonical
-- [ ] Aucune balise Open Graph (aperçu lors d'un partage sur messagerie ou réseau social)
-- [ ] Aucune donnée structurée JSON-LD
-- [ ] Aucun `sitemap.xml`
-- [ ] `robots.txt` par défaut : ne bloque rien (correct) mais ne référence aucun sitemap
+- [x] `public/index.html` déclarait `lang="en"` → corrigé en `fr`
+- [x] Titre « React App » → titre réel, et un titre propre à chaque page
+- [x] Description « Web site created using create-react-app » → description réelle
+- [x] `manifest.json` « Create React App Sample » → nom du cabinet
+- [x] Titres et descriptions par page, via `src/config/seo.ts` et le composant `Seo`
+- [x] Balise canonical, mise à jour à chaque changement de page
+- [x] Open Graph et Twitter Card, avec une image de partage en 1200×630
+- [x] Données structurées JSON-LD de type `Chiropractic`
+- [x] `sitemap.xml` limité aux six pages publiques
+- [x] `robots.txt` référençant le sitemap
 
 ### Contenu local
 
 - [ ] Le H1 de l'accueil est « Centre de Chiropraxie » : **la ville n'y figure pas**
-- [ ] Les mots « Calvados » et « Normandie » sont absents de tout le site
+- [ ] « Calvados » et « Normandie » n'apparaissent que dans les métadonnées, pas dans le contenu visible
 - [ ] Le lien Doctolib n'apparaît qu'une seule fois (page d'accueil), et **pas sur la page Contact**
-- [ ] La page Contact n'a ni carte, ni lien d'itinéraire, ni email ou téléphone cliquables
-- [ ] Coordonnées écrites en dur et dispersées dans plusieurs fichiers
+- [ ] La page Contact n'a ni carte, ni lien d'itinéraire, ni email cliquable
+- [x] Coordonnées centralisées dans `src/config/cabinet.ts`
 
 ### Structure et liens
 
@@ -40,10 +41,10 @@ Relevé avant travaux, à mettre à jour au fur et à mesure des corrections.
 - [x] URL lisibles (`/about`, `/contact`, `/pricing`…)
 - [x] Site indexable, aucun blocage involontaire
 - [x] Lien Doctolib fonctionnel (vérifié, HTTP 200)
-- [ ] Ancres internes de la page Soins non fonctionnelles : `<Link to="#id">` est
-      interprété par React Router comme un chemin, pas comme une ancre
-- [ ] Le pied de page pointe vers `/services#dry-needing` (faute : « Dry Needling »)
-- [ ] Pas de remise à zéro du défilement au changement de page
+- [x] Ancres internes réparées : `Section` n'appliquait pas son `id` au DOM,
+      aucune ancre ne pouvait donc fonctionner
+- [x] Lien du pied de page vers une section inexistante (`#chiropratique-generale`)
+- [x] Remise à zéro du défilement au changement de page (`ScrollManager`)
 
 ### Images
 
@@ -67,9 +68,14 @@ n'envisager que si l'indexation pose réellement problème.
 
 ### Risque de double indexation
 
-Deux adresses peuvent servir le même site : l'ancienne page GitHub Pages et le
-déploiement Vercel. Google risque de les traiter comme deux sites distincts, ce
-qui dilue le référencement. Traitement : voir la fin de `DEPLOIEMENT.md`.
+Trois adresses pourraient servir le même contenu : l'ancienne page GitHub Pages,
+l'adresse technique en `.pages.dev` de Cloudflare, et le domaine officiel. Google
+risque de les traiter comme des sites distincts, ce qui dilue le référencement.
+
+L'adresse officielle est **https://jadephilippe-chiropraxie.fr**, sans `www`.
+C'est elle que déclarent les balises canonical et le sitemap. Restent à traiter :
+la redirection 301 depuis `www`, et la neutralisation de GitHub Pages — voir la
+fin de `DEPLOIEMENT.md`.
 
 ## Titres et descriptions
 
@@ -108,19 +114,27 @@ patient (« à quinze minutes de … »), jamais sous forme de liste décorative
 
 ## Données structurées
 
-À implémenter en JSON-LD dans `public/index.html`, avec le type le plus précis
-applicable : `MedicalBusiness` (sous-type de `LocalBusiness`).
+En place dans `public/index.html`, type `Chiropractic` — le sous-type de
+`LocalBusiness` le plus précis pour cette activité.
 
-Ne renseigner que des informations vérifiées. Champs prévus : `name`, `url`,
-`logo`, `image`, `email`, `address` (`streetAddress`, `postalCode`,
-`addressLocality`, `addressCountry`), `openingHoursSpecification` une fois les
-horaires confirmés, et `sameAs` limité au profil Doctolib officiel.
+Champs renseignés : `name`, `url`, `image`, `email`, `address` complète,
+`openingHoursSpecification`, et `sameAs` limité au profil Doctolib officiel.
 
-Le champ `telephone` reste **absent tant que le numéro n'est pas validé** : un
+Le champ `telephone` est **absent tant que le numéro n'est pas validé** : un
 faux numéro dans des données structurées est bien plus nuisible qu'un champ
 manquant. Ne jamais ajouter `aggregateRating` ni `review` : inventer une note ou
 un avis est une violation des règles de Google et une tromperie envers les
 patients.
+
+`geo` (latitude et longitude) n'est pas renseigné : les coordonnées trouvées
+dans l'URL de la carte intégrée désignent le centre de la carte, pas
+nécessairement l'entrée du cabinet. À ajouter seulement si un relevé exact est
+disponible — une position erronée envoie les patients au mauvais endroit.
+
+> Ce bloc est **statique** : il ne lit pas `src/config/cabinet.ts`. Ce choix
+> privilégie une lecture fiable par Google, au prix d'une synchronisation
+> manuelle. Toute modification d'adresse, d'email ou d'horaires doit être
+> reportée aux deux endroits.
 
 ### Vérifier la syntaxe
 
@@ -132,14 +146,15 @@ patients.
 
 ## Google Search Console
 
-Outil gratuit de Google qui indique comment le site est vu et trouvé.
-Prérequis : connaître le domaine définitif (voir `DEPLOIEMENT.md`).
+Outil gratuit de Google qui indique comment le site est vu et trouvé. À faire
+une fois le site réellement en ligne sur son domaine.
 
 ### Ajouter le site
 
 1. Ouvrir [search.google.com/search-console](https://search.google.com/search-console).
-2. « Ajouter une propriété » → **Préfixe d'URL**, en saisissant l'adresse exacte
-   avec `https://`.
+2. « Ajouter une propriété » → **Préfixe d'URL**, en saisissant exactement
+   `https://jadephilippe-chiropraxie.fr` — l'adresse officielle, sans `www` et
+   sans barre oblique finale.
 3. Prouver la propriété du site. Deux méthodes simples : l'enregistrement DNS
    proposé (à ajouter chez le gestionnaire du domaine), ou la balise HTML à
    insérer dans `public/index.html` puis remettre le site en ligne.
