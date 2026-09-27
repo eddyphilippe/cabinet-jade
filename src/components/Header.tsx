@@ -16,6 +16,8 @@ import {
 } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
+import { cabinet } from '../config/cabinet';
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
@@ -42,7 +44,7 @@ const Header = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', py: 2 }}>
       <Typography variant="h6" component="div" sx={{ mb: 2 }}>
-        Cabinet Jade Philippe
+        {cabinet.shortName}
       </Typography>
       <List>
         {navItems.map((item) => (
@@ -86,7 +88,7 @@ const Header = () => {
                 alignItems: 'center',
               }}
             >
-              Cabinet Jade Philippe
+              {cabinet.shortName}
             </Typography>
 
             {/* Desktop Menu */}

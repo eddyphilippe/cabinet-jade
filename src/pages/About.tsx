@@ -7,13 +7,14 @@ import Section from '../components/Section';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import jadePhilippeImage from '../assets/images/jade-philippe-chiro.jpg';
+import { cabinet } from '../config/cabinet';
 
 const About = () => {
   return (
     <Box>
       <HeroBanner
         title="À Propos"
-        subtitle="Découvrez le Centre de Chiropraxie Jade Philippe et notre approche de la chiropraxie"
+        subtitle={`Découvrez le ${cabinet.name} et notre approche de la chiropraxie`}
         backgroundImage={cabinetImage}
       />
 
@@ -22,11 +23,11 @@ const About = () => {
         background="white"
       >
         <Typography paragraph>
-          Le Centre de Chiropraxie Jade Philippe a été fondé avec une mission claire : offrir des soins de chiropraxie de qualité dans un environnement accueillant et professionnel. Notre centre allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
+          Le {cabinet.name} a été fondé avec une mission claire : offrir des soins de chiropraxie de qualité dans un environnement accueillant et professionnel. Notre centre allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
         </Typography>
 
         <Typography paragraph>
-          Situé à Creully sur Seulles, notre centre en rez-de-chaussée, vous offre un accès de plain-pied à proximité d'un parking dédié.
+          Situé à {cabinet.city}, notre centre en rez-de-chaussée, vous offre un accès de plain-pied à proximité d'un parking dédié.
         </Typography>
 
         <Box sx={{ mt: 4, mb: 4 }}>
@@ -37,7 +38,7 @@ const About = () => {
             Découvrez notre centre lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
           </Typography>
           <Typography paragraph>
-            Équipé de matériel moderne et performant, le Centre de Chiropraxie Jade Philippe vous garantit des soins de qualité dans les meilleures conditions.
+            Équipé de matériel moderne et performant, le {cabinet.name} vous garantit des soins de qualité dans les meilleures conditions.
           </Typography>
         </Box>
 
@@ -46,7 +47,7 @@ const About = () => {
             Localisation
           </Typography>
           <Typography paragraph>
-            Le Centre de Chiropraxie Jade Philippe est situé à Creully sur Seulles, 63 rue de Caen, parking dédié.
+            Le {cabinet.name} est situé à {cabinet.city}, {cabinet.address}, parking dédié.
           </Typography>
         </Box>
       </Section>
@@ -57,7 +58,7 @@ const About = () => {
         centered
       >
         <Typography paragraph>
-          Le Centre de Chiropraxie Jade Philippe est situé à Creully sur Seulles, 63 rue de Caen, parking dédié.
+          Le {cabinet.name} est situé à {cabinet.city}, {cabinet.address}, parking dédié.
         </Typography>
         
         <Box sx={{ 
@@ -69,13 +70,13 @@ const About = () => {
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
         }}>
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0633173599486!2d-0.5394614842061502!3d49.28914207933026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a66dbf8b7f579%3A0x32ddab656ecaa68c!2s63%20Rue%20de%20Caen%2C%2014480%20Creully%20sur%20Seulles!5e0!3m2!1sfr!2sfr!4v1654321987654!5m2!1sfr!2sfr" 
+            src={cabinet.maps.embed}
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
             allowFullScreen={false} 
             loading="lazy"
-            title="Localisation du Centre de Chiropraxie Jade Philippe"
+            title={`Localisation du ${cabinet.name}`}
           ></iframe>
         </Box>
       </Section>

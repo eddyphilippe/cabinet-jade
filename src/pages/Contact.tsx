@@ -11,6 +11,12 @@ import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
+import {
+  cabinet,
+  fullAddress,
+  openingHoursSentence,
+  openingHoursSummary,
+} from '../config/cabinet';
 
 const Contact = () => {
   return (
@@ -32,8 +38,7 @@ const Contact = () => {
               pour prendre rendez-vous ou pour obtenir plus d'informations sur notre approche chiropratique.
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Votre chiropracteure est disponible pour vous répondre du lundi au vendredi de 9h à 19h
-              et le samedi de 9h à 13h.
+              Votre chiropracteure est disponible pour vous répondre {openingHoursSentence}.
             </Typography>
           </Grid>
 
@@ -46,16 +51,18 @@ const Contact = () => {
                 
                 <Box sx={{ mt: 2 }}>
                   <Typography variant="body1" sx={{ mb: 1 }}>
-                    <strong>Adresse:</strong> 63 Rue de Caen, 14480 Creully sur Seulles
+                    <strong>Adresse :</strong> {fullAddress}
                   </Typography>
+                  {cabinet.phone && (
+                    <Typography variant="body1" gutterBottom>
+                      <strong>Téléphone :</strong> {cabinet.phone.display}
+                    </Typography>
+                  )}
                   <Typography variant="body1" gutterBottom>
-                    <strong>Téléphone :</strong> 06 12 34 56 78
-                  </Typography>
-                  <Typography variant="body1" gutterBottom>
-                    <strong>Email :</strong> jadephilippe.chiropraxie@gmail.com
+                    <strong>Email :</strong> {cabinet.email}
                   </Typography>
                   <Typography variant="body1">
-                    <strong>Horaires:</strong> Lun-Ven: 9h-19h | Sam: 9h-13h
+                    <strong>Horaires :</strong> {openingHoursSummary}
                   </Typography>
                 </Box>
               </CardContent>

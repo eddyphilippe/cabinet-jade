@@ -6,6 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
+import { cabinet } from '../config/cabinet';
 
 const SoinsProposés = () => {
   const services = [
@@ -80,7 +81,7 @@ const SoinsProposés = () => {
     <Box>
       <HeroBanner
         title="Soins Proposés"
-        subtitle="Découvrez nos approches thérapeutiques au Cabinet Jade Philippe"
+        subtitle={`Découvrez nos approches thérapeutiques au ${cabinet.shortName}`}
         backgroundImage={cabinetImage}
       />
 
@@ -90,7 +91,7 @@ const SoinsProposés = () => {
         centered
       >
         <Typography paragraph>
-          Au Cabinet Jade Philippe, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi les causes sous-jacentes de vos problèmes de santé.
+          Au {cabinet.shortName}, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi les causes sous-jacentes de vos problèmes de santé.
         </Typography>
         
         <Grid container spacing={4} sx={{ mt: 4 }}>

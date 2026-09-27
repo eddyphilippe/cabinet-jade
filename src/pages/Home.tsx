@@ -7,13 +7,14 @@ import Section from '../components/Section';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
 import jadePhilippeImage from '../assets/images/jade-philippe-chiro.jpg';
+import { cabinet } from '../config/cabinet';
 
 const Home = () => {
   return (
     <Box>
       <HeroBanner
         title="Centre de Chiropraxie"
-        subtitle="Jade Philippe"
+        subtitle={cabinet.practitioner}
         backgroundImage={cabinetImage}
       />
 
@@ -43,10 +44,10 @@ const Home = () => {
                   bgcolor: 'primary.main' 
                 }}
                 src={jadePhilippeImage}
-                alt="Jade Philippe"
+                alt={cabinet.practitioner}
               />
               <Typography variant="h5" gutterBottom>
-                Jade Philippe
+                {cabinet.practitioner}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
                 Chiropracteure diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>)
@@ -83,7 +84,7 @@ const Home = () => {
               <Button 
                 variant="outlined" 
                 color="primary"
-                href="https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe"
+                href={cabinet.doctolib}
                 target="_blank"
                 rel="noopener noreferrer"
               >

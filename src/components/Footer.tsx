@@ -10,6 +10,8 @@ import {
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+import { cabinet } from '../config/cabinet';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -37,13 +39,13 @@ const Footer = () => {
           {/* About */}
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>
-              Centre de Chiropraxie Jade Philippe
+              {cabinet.name}
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
               Centre de chiropraxie dédié à la santé de votre système neuro-musculo-squelettique et à votre bien-être.
             </Typography>
             <Typography variant="body2" gutterBottom>
-              <strong>Email :</strong> jadephilippe.chiropraxie@gmail.com
+              <strong>Email :</strong> {cabinet.email}
             </Typography>
           </Grid>
 
@@ -94,7 +96,7 @@ const Footer = () => {
         
         <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'space-between' }, flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', textAlign: { xs: 'center', md: 'left' } }}>
           <Typography variant="body2" sx={{ opacity: 0.8 }}>
-            © {currentYear} Centre de Chiropraxie Jade Philippe. Tous droits réservés.
+            © {currentYear} {cabinet.name}. Tous droits réservés.
           </Typography>
           <Typography variant="body2" sx={{ mt: { xs: 1, md: 0 }, opacity: 0.7 }}>
             Conçu et développé avec soin pour votre bien-être
