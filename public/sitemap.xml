@@ -34,9 +34,8 @@
     <lastmod>2026-09-27</lastmod>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://jadephilippe-chiropraxie.fr/equipment</loc>
-    <lastmod>2026-09-27</lastmod>
-    <priority>0.6</priority>
-  </url>
+  <!--
+    /equipment retiree le 27/09/2026 : la page n'est plus en ligne.
+    A retablir ici si elle est remise en service, voir src/pages/Equipment.tsx.
+  -->
 </urlset>

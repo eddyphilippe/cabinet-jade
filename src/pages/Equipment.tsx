@@ -1,3 +1,24 @@
+/**
+ * ⚠️ PAGE HORS LIGNE depuis le 27/09/2026.
+ *
+ * Retirée du site à la demande de l'utilisateur, mais conservée ici : elle
+ * avait déjà été supprimée puis restaurée en mai 2025 (commits e9a7cc0 et
+ * 0751976). Ce fichier n'est importé nulle part, il n'alourdit donc pas le
+ * site construit.
+ *
+ * Pour la remettre en ligne, quatre endroits :
+ *   1. src/App.tsx — réimporter le composant et rétablir la route /equipment
+ *   2. src/components/Header.tsx — { name: 'Équipement', path: '/equipment' }
+ *   3. src/components/Footer.tsx — la même entrée dans `navigation`
+ *   4. public/sitemap.xml — rétablir l'URL, sans quoi Google ne la trouvera pas
+ *
+ * Le titre et la description de la page sont restés dans src/config/seo.ts,
+ * sous la clé `equipment`, prêts à resservir.
+ *
+ * ⚠️ Ne pas réintroduire l'électrothérapie ni le système d'imagerie
+ * posturale, retirés au commit 5352ebf du 03/05/2025, sans demande explicite.
+ */
+
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
 

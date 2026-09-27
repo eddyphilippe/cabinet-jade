@@ -11,7 +11,6 @@ import ScrollManager from './components/ScrollManager';
 import Home from './pages/Home';
 import About from './pages/About';
 import SoinsProposés from './pages/SoinsProposés';
-import Equipment from './pages/Equipment';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -81,7 +80,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<SoinsProposés />} />
-            <Route path="/equipment" element={<Equipment />} />
+            {/*
+              Page Équipement retirée du site le 27/09/2026 à la demande de
+              l'utilisateur. Le composant est conservé dans
+              src/pages/Equipment.tsx : voir l'en-tête de ce fichier pour la
+              procédure de remise en ligne.
+            */}
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

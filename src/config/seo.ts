@@ -71,6 +71,11 @@ export const seo = {
       title: `Soins de chiropraxie | ${cabinet.practitioner}, chiropracteur`,
       description: `Chiropraxie générale, thérapie des tissus mous, Dry Needling, ventouses, ondes de choc et réhabilitation à ${areas.city}.`,
     },
+    /**
+     * Page retirée du site le 27/09/2026 : plus aucune route ne l'utilise.
+     * Conservée telle quelle pour resservir en cas de remise en ligne, voir
+     * l'en-tête de src/pages/Equipment.tsx.
+     */
     equipment: {
       path: '/equipment',
       title: `Équipement du cabinet | ${cabinet.practitioner}, chiropracteur`,

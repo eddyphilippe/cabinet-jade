@@ -17,6 +17,33 @@ Modèle à copier :
 
 ---
 
+## 2026-09-27 — Retrait de la page Équipement
+
+**Objectif :** retirer la page Équipement du site, en conservant la
+possibilité de la remettre en ligne.
+
+**Fichiers modifiés :** `src/App.tsx` (route supprimée),
+`src/components/Header.tsx` et `src/components/Footer.tsx` (entrées de menu),
+`public/sitemap.xml`, `src/config/seo.ts` et `src/pages/Equipment.tsx`
+(commentaires), `README.md`.
+
+**Résultat :** le site compte désormais cinq pages. Le composant
+`src/pages/Equipment.tsx` **n'a pas été supprimé** : n'étant importé nulle
+part, il n'alourdit pas le site construit, et son en-tête décrit les quatre
+endroits à modifier pour le remettre en service. Le titre et la description
+de la page restent dans `src/config/seo.ts`, prêts à resservir.
+
+Cette prudence n'est pas théorique : la page avait déjà été supprimée puis
+restaurée en mai 2025, aux commits `e9a7cc0` et `0751976`.
+
+L'information la plus utile de cette page n'est pas perdue pour autant :
+l'appareil à onde de choc figure désormais parmi les soins proposés, et la
+page Le Cabinet continue de mentionner le matériel du cabinet.
+
+**Commit :** voir `git log` du 27/09/2026.
+
+---
+
 ## 2026-09-27 — Cloudflare Pages, domaine, et socle SEO
 
 **Objectif :** choisir un hébergeur définitif, enregistrer le domaine du

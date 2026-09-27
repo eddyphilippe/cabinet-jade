@@ -85,7 +85,11 @@ Ajouter une page implique trois fichiers : `src/App.tsx` pour la route,
 son indexation.
 
 Routes : `/` · `/about` (Le Cabinet) · `/services` (Soins proposés) ·
-`/equipment` · `/pricing` (Tarifs) · `/contact`
+`/pricing` (Tarifs) · `/contact`
+
+La page Équipement a été retirée du site le 27/09/2026. Son code est conservé
+dans `src/pages/Equipment.tsx`, dont l'en-tête détaille la procédure de remise
+en ligne.
 
 ## GitHub
 
