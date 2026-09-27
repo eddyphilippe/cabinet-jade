@@ -106,7 +106,7 @@ const SoinsProposés = () => {
         centered
       >
         <Typography paragraph>
-          Au {cabinet.name}, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi les causes sous-jacentes de vos problèmes de santé.
+          Au {cabinet.name}, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi l'origine de vos problèmes de santé.
         </Typography>
         
         <Grid container spacing={4} sx={{ mt: 4 }}>
