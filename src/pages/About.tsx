@@ -8,6 +8,7 @@ import Section from '../components/Section';
 import Seo from '../components/Seo';
 
 import cabinetImage from '../assets/images/cabinet-image.jpeg';
+import coinEnfantsImage from '../assets/images/cabinet-coin-enfants.jpg';
 import jadePhilippeImage from '../assets/images/jade-philippe-chiro.jpg';
 import { cabinet } from '../config/cabinet';
 import { seo } from '../config/seo';
@@ -38,12 +39,41 @@ const About = () => {
           <Typography variant="h6" gutterBottom>
             Notre Espace
           </Typography>
-          <Typography paragraph>
-            Découvrez notre centre lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
-          </Typography>
-          <Typography paragraph>
-            Équipé de matériel moderne et performant, le {cabinet.name} vous propose des soins personnalisés dans les meilleures conditions.
-          </Typography>
+
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={12} md={7}>
+              <Typography paragraph>
+                Découvrez notre centre lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
+              </Typography>
+              <Typography paragraph>
+                Équipé de matériel moderne et performant, le {cabinet.name} vous propose des soins personnalisés dans les meilleures conditions.
+              </Typography>
+              <Typography paragraph>
+                Un coin de jeux est à la disposition des enfants : vous pouvez venir accompagné de vos enfants pour votre consultation.
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} md={5}>
+              <Box
+                component="img"
+                src={coinEnfantsImage}
+                alt="Coin de jeux du cabinet : table et chaises d'enfants avec des jouets en bois"
+                loading="lazy"
+                sx={{
+                  width: '100%',
+                  height: { xs: 320, md: 420 },
+                  // La photo est au format portrait très allongé (473x1024) :
+                  // le cadrage privilégie le bas, où se trouvent la table et
+                  // les chaises, tout en gardant un peu de papier peint.
+                  objectFit: 'cover',
+                  objectPosition: 'center 85%',
+                  display: 'block',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                }}
+              />
+            </Grid>
+          </Grid>
         </Box>
 
         <Box sx={{ mt: 4, mb: 4 }}>
