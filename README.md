@@ -41,16 +41,19 @@ simple avertissement devient une erreur bloquante. Doit afficher
 
 ## Déploiement
 
-Hébergeur cible **Vercel**, branche `main` : tout `git push` déclenche la mise en
-production. Ne pas utiliser `npm run deploy`, hérité de l'ancien hébergement.
+Hébergeur **Cloudflare Pages**, branche `main` : tout `git push` déclenche la
+mise en production. Adresse officielle : **https://jadephilippe-chiropraxie.fr**
+(sans `www`, la version `www` redirige en 301).
+
+Ne pas utiliser `npm run deploy`, hérité de l'ancien hébergement.
 
 ⚠️ Une ancienne page **GitHub Pages** sert encore un build du 22 mars 2025 à
 l'adresse `eddyphilippe.github.io/cabinet-jade`, avec des coordonnées erronées.
 Procédure de neutralisation dans `docs/DEPLOIEMENT.md`.
 
-Le déploiement Vercel n'avait jamais abouti à cause d'un import inutilisé combiné
-au `CI=true` de Vercel. Corrigé le 27/09/2026, explication dans
-`docs/DEPLOIEMENT.md`.
+Aucun build hébergé n'avait jamais abouti, à cause d'un import inutilisé combiné
+au `CI=true` des plateformes d'hébergement. Corrigé le 27/09/2026, explication
+dans `docs/DEPLOIEMENT.md`.
 
 ## Documentation
 
@@ -68,14 +71,18 @@ au `CI=true` de Vercel. Corrigé le 27/09/2026, explication dans
 
 ```
 src/
-  config/       coordonnées du cabinet et paramètres SEO (source unique de vérité)
+  config/       cabinet.ts et seo.ts — source unique de vérité
   pages/        une page par route, déclarées dans App.tsx
-  components/   Header, Footer, HeroBanner, Section
+  components/   Header, Footer, HeroBanner, Section, Seo, ScrollManager
   assets/       images
   styles/       thème et styles globaux
-public/         index.html, robots.txt, manifest.json
+public/         index.html, robots.txt, sitemap.xml, manifest.json, _redirects
 docs/           documentation *.md + ancien build GitHub Pages (à archiver)
 ```
+
+Ajouter une page implique trois fichiers : `src/App.tsx` pour la route,
+`src/config/seo.ts` pour son titre et sa description, `public/sitemap.xml` pour
+son indexation.
 
 Routes : `/` · `/about` (Le Cabinet) · `/services` (Soins proposés) ·
 `/equipment` · `/pricing` (Tarifs) · `/contact`
@@ -108,13 +115,11 @@ médicale, de bénéfice thérapeutique, de résultat, de témoignage ni de dipl
 |---|---|
 | **Téléphone** | ❌ `phone` vaut `null` dans `src/config/cabinet.ts`. `06 12 34 56 78` était factice ; `0695112755` figurait sur le site associé à l'email personnel du développeur, son appartenance au cabinet reste à confirmer. Rien n'est écrit dans le dépôt tant que le numéro n'est pas vérifié. |
 | **Graphie de la commune** | ❔ Le site écrivait « Creully sur Seulles », la configuration utilise « Creully-sur-Seulles ». À aligner sur la fiche Google Business Profile. |
-| **Nom de domaine** | ❔ À confirmer. Aucun `CNAME`, aucune URL absolue dans le projet. |
-| **Hébergement actif** | ❔ Vercel à confirmer ; GitHub Pages encore en ligne. |
-| « Dr. Jade Philippe », « Chiropracteure D.C. » | ❔ Mentions non vérifiées sur `/about`. |
-| « pratique depuis plus de 12 ans » | ❔ Ancienneté non vérifiée, à confirmer ou retirer. |
 | Tarifs (60 € / 50 € / 60 €) | ❔ À confirmer auprès de Jade. |
-| Horaires (Lun-Ven 9h-19h, Sam 9h-13h) | ❔ À confirmer auprès de Jade. |
-| Communes de la zone desservie | ❔ À définir avec Jade ; ne pas inventer. |
+| Horaires (Lun-Ven 9h-19h, Sam 9h-13h) | ❔ À confirmer auprès de Jade. Publiés tels quels dans les données structurées. |
+| Communes de la zone desservie | ❔ `areas.nearbyTowns` est vide dans `src/config/seo.ts`. À définir avec Jade ; ne pas inventer. |
+| Favicon et icônes | ❔ `favicon.ico`, `logo192.png` et `logo512.png` sont encore ceux de Create React App. À remplacer si Jade a un logo. |
+| Phrase sur l'auto-guérison (`/about`) | ❔ Formulation affirmant un mécanisme thérapeutique, laissée inchangée dans l'attente d'un arbitrage. |
 
 ## Informations vérifiées
 

@@ -1,5 +1,7 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
+// jest-dom ajoute des assertions adaptées au DOM, comme toBeInTheDocument().
+// https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+// jsdom n'implémente pas le défilement. Sans ce remplacement, ScrollManager
+// noie la sortie des tests sous des avertissements « Not implemented ».
+window.scrollTo = jest.fn();

@@ -48,15 +48,28 @@ Ne pas réintroduire les équipements retirés au commit `5352ebf`
 
 ## Déploiement
 
-Voir `docs/DEPLOIEMENT.md`. Hébergeur cible : Vercel. Dépôt
-`github.com/eddyphilippe/cabinet-jade`, branche `main`. Domaine **à confirmer**.
+Voir `docs/DEPLOIEMENT.md`. Hébergeur : **Cloudflare Pages**, dépôt
+`github.com/eddyphilippe/cabinet-jade`, branche `main`. Adresse officielle
+`https://jadephilippe-chiropraxie.fr` (sans `www`).
+
+Toujours vérifier avec **`CI=true npm run build`** : l'hébergeur transforme les
+avertissements ESLint en erreurs, un import oublié suffit à bloquer la mise en
+ligne. Ne pas supprimer `.node-version` ni `public/_redirects`.
+
 Ne supprimer aucune configuration de domaine ou d'hébergement sans validation.
 
 ## SEO
 
-Zones géographiques et métadonnées centralisées dans `src/config/seo.ts`.
-Pas de keyword stuffing, pas de pages locales dupliquées en série, pas de faux
-avis. Un titre et une description propres à chaque page.
+Zones géographiques et métadonnées centralisées dans `src/config/seo.ts` ;
+chaque page monte `<Seo page={seo.pages.X} />`. Pas de keyword stuffing, pas de
+pages locales dupliquées en série, pas de faux avis.
+
+Le JSON-LD de `public/index.html` est statique : le **tenir synchronisé à la
+main** avec `src/config/cabinet.ts`. Ne jamais y ajouter `telephone` tant que le
+numéro n'est pas validé, ni `aggregateRating` ou `review`.
+
+Toute nouvelle page se déclare à trois endroits : `src/App.tsx`,
+`src/config/seo.ts` et `public/sitemap.xml`.
 
 ## Avant toute intervention
 
@@ -65,7 +78,7 @@ avis. Un titre et une description propres à chaque page.
 3. Ne supprimer aucune fonctionnalité sans raison explicite.
 4. Conserver l'identité visuelle (thème défini dans `src/App.tsx`) sauf demande.
 5. Préférer les modifications simples et maintenables aux refontes.
-6. Exécuter `npm run build` avant de proposer une mise en production.
+6. Exécuter `CI=true npm run build` avant de proposer une mise en production.
 7. Documenter tout changement important dans `docs/MODIFICATIONS.md`.
 8. Présenter clairement les fichiers modifiés et ce qui a changé.
 9. Jamais de `git push --force` sans demande explicite.

@@ -17,6 +17,63 @@ Modèle à copier :
 
 ---
 
+## 2026-09-27 — Cloudflare Pages, domaine, et socle SEO
+
+**Objectif :** choisir un hébergeur définitif, enregistrer le domaine du
+cabinet, et doter le site du socle de référencement qui lui manquait
+entièrement.
+
+**Fichiers modifiés :** `.node-version` (nouveau), suppression de
+`vercel.json`, `src/config/cabinet.ts`, `src/config/seo.ts` (nouveau),
+`src/components/Seo.tsx` et `src/components/ScrollManager.tsx` (nouveaux),
+`src/components/Section.tsx`, `src/components/Footer.tsx`, `src/App.tsx`, les
+sept pages, `public/index.html`, `public/manifest.json`, `public/robots.txt`,
+`public/sitemap.xml` et `public/og-image.jpg` (nouveaux), `src/App.test.tsx`,
+`src/setupTests.ts`, et la documentation.
+
+**Résultat :**
+
+*Hébergement.* Cloudflare Pages retenu plutôt que Vercel, parce que le
+développeur y héberge déjà un autre site et en maîtrise l'interface. Le domaine
+`jadephilippe-chiropraxie.fr` a été enregistré chez OVH et sa zone déléguée à
+Cloudflare. L'adresse officielle est **sans `www`**. `vercel.json` a été
+supprimé : `public/_redirects` assure déjà le routage sur Cloudflare. Un fichier
+`.node-version` fixe Node 22, Cloudflare Pages ne lisant pas le champ `engines`
+de `package.json`.
+
+*SEO technique.* Le site déclarait `lang="en"`, s'intitulait « React App » et
+portait la description par défaut de Create React App. Désormais : langue
+française, titre et description propres à chaque page via `src/config/seo.ts` et
+le composant `Seo`, balises canonical, Open Graph avec une image de partage
+recadrée depuis la photo du cabinet, `sitemap.xml`, `robots.txt` renvoyant vers
+le sitemap, et données structurées JSON-LD de type `Chiropractic`.
+
+Le JSON-LD ne contient ni `telephone`, ni `aggregateRating`, ni `review` : un
+faux numéro ou un faux avis nuirait davantage qu'un champ manquant. Il est
+statique dans `public/index.html` et doit être tenu synchronisé à la main avec
+`src/config/cabinet.ts` — ce choix privilégie la fiabilité de lecture par Google
+sur l'élégance de la source unique, et il est signalé dans le fichier.
+
+*Liens internes.* Les ancres de la page Soins n'avaient jamais pu fonctionner :
+le composant `Section` acceptait une prop `id` sans jamais l'appliquer au DOM,
+donc l'élément cible n'existait pas. Corrigé, avec un `ScrollManager` qui gère le
+défilement au changement de page et le saut vers les ancres. Le pied de page
+pointait par ailleurs vers `#chiropratique-generale`, section inexistante.
+
+*Orthographe.* « Dry Needing » corrigé en « Dry Needling » sur les pages Soins et
+Tarifs. Le développeur avait déjà fait cette correction dans le pied de page au
+commit `5700b63` ; le reste du site était resté incohérent. L'ancre a suivi.
+
+*Tests.* `App.test.tsx` contenait encore le test de démonstration de Create React
+App, qui cherchait un lien « learn react » inexistant : il échouait depuis le
+premier jour. Remplacé par cinq tests utiles, dont un filet de sécurité qui
+échoue si le faux numéro `06 12 34 56 78` ou le numéro personnel du développeur
+réapparaissait dans le rendu.
+
+**Commits :** voir `git log` du 27/09/2026.
+
+---
+
 ## 2026-09-27 — Cause du blocage de déploiement identifiée et corrigée
 
 **Objectif :** comprendre pourquoi le site publié restait celui de mars 2025
