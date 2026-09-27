@@ -37,17 +37,21 @@ describe("Page d'accueil", () => {
 });
 
 describe('Coordonnées du cabinet', () => {
-  it("n'affiche aucun numéro de téléphone tant qu'aucun n'est validé", () => {
+  it("ne réaffiche jamais le faux numéro publié par le passé", () => {
     render(<App />);
 
-    // Filet de sécurité : le faux numéro 06 12 34 56 78 a été publié par le
-    // passé, et l'historique contient le numéro personnel du développeur.
-    // Aucun des deux ne doit réapparaître.
+    // Le numéro factice 06 12 34 56 78 est resté affiché sur la page Contact
+    // jusqu'au 27/09/2026. Ce test échoue s'il revient, quelle qu'en soit la
+    // cause : copier-coller, retour arrière malencontreux, ancienne branche.
     expect(document.body.textContent).not.toMatch(/06\s*12\s*34\s*56\s*78/);
-    expect(document.body.textContent).not.toMatch(/0695112755|06\s*95\s*11\s*27\s*55/);
+  });
 
-    if (!cabinet.phone) {
-      expect(screen.queryByText(/téléphone/i)).not.toBeInTheDocument();
+  it('expose le téléphone dans un format appelable depuis un mobile', () => {
+    // Sans ce format international, le lien tel: ne fonctionne pas depuis
+    // l'étranger, et Google refuse le champ telephone des données structurées.
+    if (cabinet.phone) {
+      expect(cabinet.phone.e164).toMatch(/^\+33[1-9]\d{8}$/);
+      expect(cabinet.phone.display).toMatch(/^0[1-9]( \d{2}){4}$/);
     }
   });
 

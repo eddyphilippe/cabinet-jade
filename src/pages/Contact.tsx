@@ -76,12 +76,6 @@ const Contact = () => {
                       </MuiLink>
                     </Typography>
                   )}
-                  <Typography variant="body1" gutterBottom>
-                    <strong>Email :</strong>{' '}
-                    <MuiLink href={`mailto:${cabinet.email}`} color="inherit">
-                      {cabinet.email}
-                    </MuiLink>
-                  </Typography>
                   <Typography variant="body1">
                     <strong>Horaires :</strong> {openingHoursSummary}
                   </Typography>

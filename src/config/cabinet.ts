@@ -70,23 +70,18 @@ export const cabinet: Cabinet = {
   email: 'jadephilippe.chiropraxie@gmail.com',
 
   /**
-   * Téléphone. ⚠️ À VALIDER — volontairement laissé à `null`.
+   * Téléphone du cabinet, confirmé par l'utilisateur le 27/09/2026.
    *
-   * Aucun numéro n'est renseigné ici pour deux raisons. D'abord, le numéro
-   * `06 12 34 56 78` présent sur le site jusqu'au 27/09/2026 était factice.
-   * Ensuite, le numéro `0695112755` figurait sur le site avant le 01/04/2025
-   * (commit 7a8ef64) associé à l'adresse email personnelle du développeur : son
-   * appartenance au cabinet doit être confirmée avant publication.
+   * Le numéro factice `06 12 34 56 78`, affiché sur la page Contact jusqu'à
+   * cette date, ne doit jamais réapparaître : un test le vérifie.
    *
-   * Ce dépôt est public : un numéro écrit ici est lisible de tous, même s'il
-   * n'est pas affiché à l'écran. Ne le renseigner qu'une fois vérifié.
-   *
-   * Pour l'activer, remplacer `null` par :
-   *   { e164: '+33XXXXXXXXX', display: '0X XX XX XX XX' }
-   * L'en-tête, le pied de page, la page Contact et les données structurées
-   * l'afficheront alors automatiquement.
+   * ⚠️ Toute modification doit être reportée à la main dans le champ
+   * `telephone` du JSON-LD de `public/index.html`, qui est statique.
    */
-  phone: null,
+  phone: {
+    e164: '+33695112755',
+    display: '06 95 11 27 55',
+  },
 
   /** Prise de rendez-vous en ligne (lien vérifié le 27/09/2026). */
   doctolib:
