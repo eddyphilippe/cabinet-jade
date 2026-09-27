@@ -1,13 +1,18 @@
 import React from 'react';
 import {
   Box,
+  Button,
   Grid,
   Typography,
   Card,
   CardContent,
+  Link as MuiLink,
+  Stack,
 } from '@mui/material';
 
+import AppointmentButton from '../components/AppointmentButton';
 import HeroBanner from '../components/HeroBanner';
+import MapEmbed from '../components/MapEmbed';
 import Section from '../components/Section';
 import Seo from '../components/Seo';
 
@@ -40,8 +45,13 @@ const Contact = () => {
               N'hésitez pas à nous contacter pour toute question concernant nos services, 
               pour prendre rendez-vous ou pour obtenir plus d'informations sur notre approche chiropratique.
             </Typography>
-            <Typography variant="body1" color="text.secondary">
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
               Votre chiropracteure est disponible pour vous répondre {openingHoursSentence}.
+            </Typography>
+
+            <AppointmentButton size="large" sx={{ px: 4, py: 1.5 }} />
+            <Typography variant="body2" color="text.secondary" sx={{ mt: 1.5 }}>
+              La prise de rendez-vous se fait en ligne sur Doctolib.
             </Typography>
           </Grid>
 
@@ -58,20 +68,47 @@ const Contact = () => {
                   </Typography>
                   {cabinet.phone && (
                     <Typography variant="body1" gutterBottom>
-                      <strong>Téléphone :</strong> {cabinet.phone.display}
+                      <strong>Téléphone :</strong>{' '}
+                      <MuiLink href={`tel:${cabinet.phone.e164}`} color="inherit">
+                        {cabinet.phone.display}
+                      </MuiLink>
                     </Typography>
                   )}
                   <Typography variant="body1" gutterBottom>
-                    <strong>Email :</strong> {cabinet.email}
+                    <strong>Email :</strong>{' '}
+                    <MuiLink href={`mailto:${cabinet.email}`} color="inherit">
+                      {cabinet.email}
+                    </MuiLink>
                   </Typography>
                   <Typography variant="body1">
                     <strong>Horaires :</strong> {openingHoursSummary}
                   </Typography>
                 </Box>
+
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mt: 3 }}>
+                  <Button
+                    variant="outlined"
+                    color="inherit"
+                    href={cabinet.maps.directions}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Calculer mon itinéraire
+                  </Button>
+                </Stack>
               </CardContent>
             </Card>
           </Grid>
         </Grid>
+      </Section>
+
+      <Section title="Accès au cabinet" background="light">
+        <Typography paragraph>
+          Le cabinet se situe {cabinet.address.toLowerCase()} à {cabinet.city},
+          dans le {cabinet.department}. Il est installé en rez-de-chaussée, avec
+          un accès de plain-pied et un parking dédié.
+        </Typography>
+        <MapEmbed />
       </Section>
     </Box>
   );

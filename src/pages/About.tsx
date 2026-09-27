@@ -3,6 +3,7 @@ import { Box, Typography, Button, Grid, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import HeroBanner from '../components/HeroBanner';
+import MapEmbed from '../components/MapEmbed';
 import Section from '../components/Section';
 import Seo from '../components/Seo';
 
@@ -64,23 +65,8 @@ const About = () => {
           Le {cabinet.name} est situé à {cabinet.city}, {cabinet.address}, parking dédié.
         </Typography>
         
-        <Box sx={{ 
-          width: '100%', 
-          height: '400px', 
-          mt: 3,
-          borderRadius: '8px',
-          overflow: 'hidden',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-        }}>
-          <iframe 
-            src={cabinet.maps.embed}
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={false} 
-            loading="lazy"
-            title={`Localisation du ${cabinet.name}`}
-          ></iframe>
+        <Box sx={{ mt: 3 }}>
+          <MapEmbed />
         </Box>
       </Section>
 
