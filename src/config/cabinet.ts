@@ -41,7 +41,7 @@ export interface Cabinet {
   phone: Phone | null;
   doctolib: string;
   maps: { place: string; directions: string; embed: string };
-  website: string | null;
+  website: string;
   openingHours: OpeningHours[];
 }
 
@@ -101,13 +101,15 @@ export const cabinet: Cabinet = {
   },
 
   /**
-   * Adresse publique du site, sans barre oblique finale.
+   * Adresse publique officielle du site, sans barre oblique finale.
    *
-   * ⚠️ À VALIDER — domaine à confirmer. Reste `null` tant que le domaine
-   * définitif n'est pas connu : cette valeur sert aux balises canonical et au
-   * sitemap, une erreur ici nuirait au référencement. Voir docs/DEPLOIEMENT.md.
+   * Domaine enregistré chez OVH le 27/09/2026, DNS géré sur Cloudflare.
+   * La version `www` redirige en 301 vers celle-ci : ne jamais publier de lien
+   * vers `www`, sous peine de faire indexer deux adresses concurrentes.
+   *
+   * Cette valeur alimente les balises canonical et le sitemap.
    */
-  website: null,
+  website: 'https://jadephilippe-chiropraxie.fr',
 
   /** ⚠️ À VALIDER auprès de Jade — repris de la page Contact existante. */
   openingHours: [
