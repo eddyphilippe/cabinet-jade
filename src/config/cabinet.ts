@@ -49,8 +49,12 @@ export const cabinet: Cabinet = {
   /** Nom officiel, utilisé dans le pied de page et les données structurées. */
   name: 'Centre de Chiropraxie Jade Philippe',
 
-  /** Forme courte, pour les emplacements où la place manque (en-tête, mobile). */
-  shortName: 'Cabinet Jade Philippe',
+  /**
+   * Libellé court affiché dans l'en-tête du site, où la place manque.
+   * Dans une phrase ou un titre de page, utiliser `name` plutôt que celui-ci :
+   * il ne contient pas le nom de la praticienne.
+   */
+  shortName: 'Centre de Chiropraxie',
 
   practitioner: 'Jade Philippe',
   profession: 'Chiropracteur',

@@ -68,7 +68,7 @@ export const seo = {
     },
     services: {
       path: '/services',
-      title: `Soins de chiropraxie | ${cabinet.shortName}`,
+      title: `Soins de chiropraxie | ${cabinet.practitioner}, chiropracteur`,
       description: `Chiropraxie générale, thérapie des tissus mous, Dry Needling, ondes de choc et réhabilitation au cabinet de ${cabinet.practitioner} à ${areas.city}.`,
     },
     equipment: {
@@ -88,7 +88,7 @@ export const seo = {
     },
     notFound: {
       path: '*',
-      title: `Page introuvable | ${cabinet.shortName}`,
+      title: `Page introuvable | ${cabinet.name}`,
       description: 'Cette page n’existe pas ou a été déplacée.',
       noIndex: true,
       inSitemap: false,

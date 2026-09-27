@@ -96,7 +96,7 @@ const SoinsProposés = () => {
       <Seo page={seo.pages.services} />
       <HeroBanner
         title="Soins Proposés"
-        subtitle={`Découvrez nos approches thérapeutiques au ${cabinet.shortName}`}
+        subtitle={`Découvrez nos approches thérapeutiques au ${cabinet.name}`}
         backgroundImage={cabinetImage}
       />
 
@@ -106,7 +106,7 @@ const SoinsProposés = () => {
         centered
       >
         <Typography paragraph>
-          Au {cabinet.shortName}, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi les causes sous-jacentes de vos problèmes de santé.
+          Au {cabinet.name}, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi les causes sous-jacentes de vos problèmes de santé.
         </Typography>
         
         <Grid container spacing={4} sx={{ mt: 4 }}>
