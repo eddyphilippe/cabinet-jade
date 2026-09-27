@@ -79,7 +79,7 @@ const SoinsProposés = () => {
       id: 'chiropraxie-sportive',
       title: 'Chiropraxie Sportive',
       description: 'Soins spécialisés pour les sportifs afin d\'optimiser leurs performances et accélérer leur récupération.',
-      longDescription: "La chiropraxie sportive est une approche spécialisée qui combine techniques d'ajustement, thérapie des tissus mous et conseils personnalisés pour les sportifs de tous niveaux. Elle vise à améliorer les performances, prévenir les blessures et accélérer la récupération.",
+      longDescription: "La chiropraxie sportive est une approche spécialisée qui combine techniques d'ajustement, thérapie des tissus mous et conseils personnalisés pour les sportifs de tous niveaux. Elle vise à améliorer les performances, prévenir les blessures et accélérer la récupération. Dans les pays anglo-saxons, les chiropracteurs sont intégrés de longue date aux staffs médicaux des équipes sportives professionnelles, aux côtés des médecins et des préparateurs physiques.",
       benefits: [
         'Amélioration des performances sportives',
         'Prévention des blessures',
