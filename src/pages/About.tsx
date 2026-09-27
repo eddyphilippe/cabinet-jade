@@ -27,7 +27,7 @@ const About = () => {
         background="white"
       >
         <Typography paragraph>
-          Le {cabinet.name} a été fondé avec une mission claire : offrir des soins de chiropraxie de qualité dans un environnement accueillant et professionnel. Notre centre allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
+          Le {cabinet.name} a été fondé avec une mission claire : offrir des soins de chiropraxie personnalisés dans un environnement accueillant et professionnel. Notre centre allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
         </Typography>
 
         <Typography paragraph>
@@ -42,7 +42,7 @@ const About = () => {
             Découvrez notre centre lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
           </Typography>
           <Typography paragraph>
-            Équipé de matériel moderne et performant, le {cabinet.name} vous garantit des soins de qualité dans les meilleures conditions.
+            Équipé de matériel moderne et performant, le {cabinet.name} vous propose des soins personnalisés dans les meilleures conditions.
           </Typography>
         </Box>
 

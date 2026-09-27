@@ -122,7 +122,7 @@ médicale, de bénéfice thérapeutique, de résultat, de témoignage ni de dipl
 ## Informations vérifiées
 
 - **Adresse** : 63 Rue de Caen, 14480 Creully-sur-Seulles, France
-- **Téléphone** : 06 95 11 27 55 — confirmé le 27/09/2026
+- **Téléphone** : 06 95 11 27 55 — ligne professionnelle du cabinet, confirmée le 27/09/2026
 - **Horaires** : du lundi au vendredi 10h-19h, samedi 10h-13h — confirmés le 27/09/2026
 - **Email** : jadephilippe.chiropraxie@gmail.com (affiché dans le pied de page,
   retiré de l'encart de la page Contact à la demande de l'utilisateur)
