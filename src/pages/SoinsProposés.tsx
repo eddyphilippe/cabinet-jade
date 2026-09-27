@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, Chip, Divider } from '@mui/material';
+import { Box, Typography, Button, Grid, Chip } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import HeroBanner from '../components/HeroBanner';
