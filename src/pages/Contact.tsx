@@ -107,7 +107,7 @@ const Contact = () => {
         <Typography paragraph>
           Le cabinet se situe {addressInSentence} à {cabinet.city},
           dans le {cabinet.department}. Il est installé en rez-de-chaussée, avec
-          un accès de plain-pied et un parking dédié.
+          un accès sans marche et un parking dédié.
         </Typography>
         <MapEmbed />
       </Section>

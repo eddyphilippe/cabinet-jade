@@ -31,7 +31,7 @@ const About = () => {
         </Typography>
 
         <Typography paragraph>
-          Situé à {cabinet.city}, notre centre en rez-de-chaussée, vous offre un accès de plain-pied à proximité d'un parking dédié.
+          Situé à {cabinet.city}, notre centre en rez-de-chaussée vous offre un accès sans marche, à proximité d'un parking dédié.
         </Typography>
 
         <Box sx={{ mt: 4, mb: 4 }}>

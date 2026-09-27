@@ -37,7 +37,7 @@ const Home = () => {
         <Typography paragraph>
           Le cabinet se situe {addressInSentence} à {cabinet.city},
           dans le {cabinet.department}, en {cabinet.region}. Il est installé en
-          rez-de-chaussée, avec un accès de plain-pied et un parking dédié.
+          rez-de-chaussée, avec un accès sans marche et un parking dédié.
         </Typography>
 
         <Box sx={{ mt: 4 }}>

@@ -59,12 +59,12 @@ export const seo = {
     home: {
       path: '/',
       title: `Chiropracteur à ${areas.city} | ${cabinet.practitioner}`,
-      description: `${cabinet.practitioner}, chiropracteur à ${areas.city} dans le ${areas.department}. Cabinet de plain-pied avec parking, rendez-vous en ligne.`,
+      description: `${cabinet.practitioner}, chiropracteur à ${areas.city} dans le ${areas.department}. Cabinet en rez-de-chaussée sans marche, parking, rendez-vous en ligne.`,
     },
     about: {
       path: '/about',
       title: `Cabinet de chiropraxie à ${areas.city} | ${cabinet.practitioner}`,
-      description: `Le cabinet de chiropraxie de ${cabinet.practitioner} à ${areas.city} : accès de plain-pied, parking dédié, et le parcours de votre chiropracteure.`,
+      description: `Le cabinet de chiropraxie de ${cabinet.practitioner} à ${areas.city} : accès sans marche, parking dédié, et le parcours de votre chiropracteure.`,
     },
     services: {
       path: '/services',
@@ -79,7 +79,7 @@ export const seo = {
     pricing: {
       path: '/pricing',
       title: `Tarifs des consultations | ${cabinet.practitioner}, chiropracteur`,
-      description: `Tarifs des consultations de chiropraxie à ${areas.city} : première consultation, séance de suivi et Dry Needling. Règlement par carte, espèces ou chèque.`,
+      description: `Tarifs des consultations de chiropraxie à ${areas.city} : première consultation, séance de suivi et Dry Needling. Carte, espèces ou chèque.`,
     },
     contact: {
       path: '/contact',
