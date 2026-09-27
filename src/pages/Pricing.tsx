@@ -32,17 +32,6 @@ const Pricing = () => {
         'Conseils personnalisés',
         'Adaptation du plan de traitement si nécessaire'
       ]
-    },
-    {
-      title: 'Dry Needling',
-      price: '60€',
-      description: 'Technique spécifique pour la douleur aiguë',
-      features: [
-        'Prise en charge du lumbago en phase aiguë',
-        'Traitement des points gâchettes musculaires',
-        'Soulagement rapide des douleurs',
-        'Complémentaire aux ajustements vertébraux'
-      ]
     }
   ];
 

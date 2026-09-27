@@ -84,7 +84,7 @@ export const seo = {
     pricing: {
       path: '/pricing',
       title: `Tarifs des consultations | ${cabinet.practitioner}, chiropracteur`,
-      description: `Tarifs des consultations de chiropraxie à ${areas.city} : première consultation, séance de suivi et Dry Needling. Carte, espèces ou chèque.`,
+      description: `Tarifs des consultations de chiropraxie à ${areas.city} : première consultation et séance de suivi. Règlement par carte, espèces ou chèque.`,
     },
     contact: {
       path: '/contact',
