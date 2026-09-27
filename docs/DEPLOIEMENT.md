@@ -29,8 +29,36 @@ L'historique montre une migration vers **Vercel** le 22 mars 2025 à 15h11
 - `src/App.tsx` utilise `BrowserRouter` (URL propres) et non plus `HashRouter`
   (URL en `#/`, qui était le contournement pour GitHub Pages).
 
-À la date de l'audit, `https://cabinet-jade.vercel.app` répond **404** : le
-projet Vercel porte un autre nom, ou n'a jamais été déployé.
+À la date de l'audit, `https://cabinet-jade.vercel.app` répond **404**.
+
+### Pourquoi le déploiement Vercel n'a jamais fonctionné
+
+Cause identifiée et corrigée le 27/09/2026 (commit `2e19daa`).
+
+Vercel définit la variable d'environnement `CI=true`. Dans ce mode, Create React
+App **transforme les avertissements ESLint en erreurs** :
+
+```
+Treating warnings as errors because process.env.CI = true.
+Failed to compile.
+```
+
+Le projet contenait un import inutilisé (`Divider` dans `SoinsProposés.tsx`),
+présent depuis le commit initial `a0dfb13` du 22 mars 2025 à 10h40 — soit
+*avant* la migration vers Vercel de 15h11. Le build Vercel échouait donc
+systématiquement, et n'a jamais pu aboutir une seule fois. C'est ce qui explique
+que GitHub Pages soit resté le seul site en ligne avec un build périmé.
+
+**Conséquence pratique :** en local, `npm run build` est indulgent, mais
+l'hébergeur ne l'est pas. Pour reproduire exactement le comportement de Vercel
+avant de pousser :
+
+```bash
+CI=true npm run build
+```
+
+Cette commande doit afficher « Compiled successfully ». Le moindre avertissement
+ESLint, même un simple import oublié, suffit à bloquer la mise en production.
 
 ### Domaine
 

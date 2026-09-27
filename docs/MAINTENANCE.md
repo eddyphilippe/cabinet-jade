@@ -56,12 +56,18 @@ Cliquer tous les liens de la zone modifiée : menu, pied de page, bouton
 ### 7. Réaliser le build
 
 ```bash
-npm run build
+CI=true npm run build
 ```
 
-**Ne jamais pousser sans avoir fait cette étape.** Le serveur de développement
-est plus tolérant que le build de production : une erreur peut n'apparaître
-qu'ici. Un *warning* est acceptable, une *error* non.
+**Ne jamais pousser sans avoir fait cette étape**, et bien garder le `CI=true`.
+
+C'est ainsi que l'hébergeur construit le site, et dans ce mode le moindre
+avertissement devient une erreur bloquante — même un import oublié en haut d'un
+fichier. C'est exactement ce qui a empêché toute mise en ligne entre mars 2025 et
+septembre 2026 (voir `DEPLOIEMENT.md`).
+
+La commande doit se terminer par « Compiled successfully ». Si elle affiche
+« Failed to compile », le message indique le fichier et la ligne à corriger.
 
 ### 8. Créer un commit
 

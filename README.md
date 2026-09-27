@@ -31,10 +31,13 @@ npm start     # http://localhost:3000, rechargement automatique
 ## Build
 
 ```bash
-npm run build     # génère build/
+CI=true npm run build     # génère build/
 ```
 
-À exécuter systématiquement **avant** de pousser du code.
+À exécuter systématiquement **avant** de pousser du code, et toujours avec
+`CI=true` : c'est ainsi que l'hébergeur construit le site, et dans ce mode un
+simple avertissement devient une erreur bloquante. Doit afficher
+« Compiled successfully ».
 
 ## Déploiement
 
@@ -44,6 +47,10 @@ production. Ne pas utiliser `npm run deploy`, hérité de l'ancien hébergement.
 ⚠️ Une ancienne page **GitHub Pages** sert encore un build du 22 mars 2025 à
 l'adresse `eddyphilippe.github.io/cabinet-jade`, avec des coordonnées erronées.
 Procédure de neutralisation dans `docs/DEPLOIEMENT.md`.
+
+Le déploiement Vercel n'avait jamais abouti à cause d'un import inutilisé combiné
+au `CI=true` de Vercel. Corrigé le 27/09/2026, explication dans
+`docs/DEPLOIEMENT.md`.
 
 ## Documentation
 
@@ -99,7 +106,8 @@ médicale, de bénéfice thérapeutique, de résultat, de témoignage ni de dipl
 
 | Information | État |
 |---|---|
-| **Téléphone** | ❌ Aucun numéro valide. `06 12 34 56 78` est factice, `0695112755` appartient au développeur. Non publié tant qu'il n'est pas confirmé. |
+| **Téléphone** | ❌ `phone` vaut `null` dans `src/config/cabinet.ts`. `06 12 34 56 78` était factice ; `0695112755` figurait sur le site associé à l'email personnel du développeur, son appartenance au cabinet reste à confirmer. Rien n'est écrit dans le dépôt tant que le numéro n'est pas vérifié. |
+| **Graphie de la commune** | ❔ Le site écrivait « Creully sur Seulles », la configuration utilise « Creully-sur-Seulles ». À aligner sur la fiche Google Business Profile. |
 | **Nom de domaine** | ❔ À confirmer. Aucun `CNAME`, aucune URL absolue dans le projet. |
 | **Hébergement actif** | ❔ Vercel à confirmer ; GitHub Pages encore en ligne. |
 | « Dr. Jade Philippe », « Chiropracteure D.C. » | ❔ Mentions non vérifiées sur `/about`. |

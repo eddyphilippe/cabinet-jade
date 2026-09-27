@@ -17,6 +17,59 @@ Modèle à copier :
 
 ---
 
+## 2026-09-27 — Cause du blocage de déploiement identifiée et corrigée
+
+**Objectif :** comprendre pourquoi le site publié restait celui de mars 2025
+alors que le code avait été corrigé jusqu'en mai 2025.
+
+**Fichiers modifiés :** `src/pages/SoinsProposés.tsx` (un import retiré),
+`docs/DEPLOIEMENT.md`, `docs/MAINTENANCE.md`.
+
+**Résultat :** Vercel définit `CI=true`, réglage dans lequel Create React App
+transforme les avertissements ESLint en erreurs de compilation. Le projet
+contenait un import `Divider` inutilisé depuis le commit initial `a0dfb13`
+(22 mars 2025, 10h40), antérieur à la migration vers Vercel `6843ddf` (même jour,
+15h11) : **le build Vercel n'a donc jamais abouti une seule fois.** GitHub Pages
+est resté le seul site en ligne, avec un build figé au 22 mars 2025.
+
+Vérifié en reconstruisant le dépôt à l'état du tag
+`etat-initial-avant-reorganisation` : `CI=true npm run build` y échoue avec
+« Failed to compile ». Après correction, la même commande affiche « Compiled
+successfully ». La procédure de maintenance impose désormais `CI=true` lors du
+build de vérification.
+
+**Commit :** `2e19daa`
+
+---
+
+## 2026-09-27 — Centralisation des informations du cabinet
+
+**Objectif :** supprimer la dispersion des coordonnées, écrites en dur dans une
+demi-douzaine de fichiers, et faire disparaître le numéro de téléphone factice
+affiché sur la page Contact.
+
+**Fichiers modifiés :** création de `src/config/cabinet.ts` ; branchement de
+`src/components/Header.tsx`, `src/components/Footer.tsx`, `src/pages/Contact.tsx`,
+`src/pages/Home.tsx`, `src/pages/About.tsx` et `src/pages/SoinsProposés.tsx`.
+
+**Résultat :** toutes les coordonnées proviennent d'un seul fichier. Les horaires
+existent en deux formats générés depuis la même source (encart et phrase), ce qui
+supprime le risque de les voir diverger. Le champ `phone` vaut `null` : le dépôt
+étant public, aucun numéro non vérifié n'y est écrit, même masqué à l'affichage,
+car il resterait lisible dans le bundle JavaScript. Les composants n'affichent la
+ligne « Téléphone » que lorsque le champ est renseigné.
+
+Le faux numéro `06 12 34 56 78` ne figure plus ni dans le code ni dans le build.
+
+Suppression par ailleurs des fichiers orphelins : `Navbar.tsx`, `Services.tsx`,
+`ServiceCard.tsx`, les dossiers `cabinet-jade-new/` et `cabinet-jade/`, et quatre
+images en doublon sur six. Trois de ces images portaient un nom de portrait alors
+qu'elles étaient en réalité des copies de la photo du cabinet.
+
+**Commits :** `701769f`, `a5d58e2`
+
+---
+
 ## 2026-09-27 — Reprise du projet : audit, documentation et règles
 
 **Objectif :** reprendre la maintenance du site sur un nouvel ordinateur, après
