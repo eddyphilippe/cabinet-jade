@@ -52,6 +52,18 @@ const SoinsProposés = () => {
       ]
     },
     {
+      id: 'ventouses',
+      title: 'Ventouses',
+      description: 'Coupelles appliquées sur la peau pour un travail localisé des tissus mous.',
+      longDescription: "La thérapie par ventouses consiste à appliquer sur la peau des coupelles qui y créent une aspiration. Au cabinet, elle vient compléter le travail manuel sur les tissus mous, sur des zones de tension musculaire identifiées lors de l'examen. La technique est non invasive et peut laisser, pendant quelques jours, des marques circulaires sans gravité à l'endroit des ventouses.",
+      benefits: [
+        'Travail localisé sur les zones de tension musculaire',
+        'Technique non invasive',
+        'Complémentaire à la thérapie des tissus mous',
+        'Adaptée au cas par cas selon l’examen'
+      ]
+    },
+    {
       id: 'ondes-de-choc',
       title: 'Ondes de Choc',
       description: 'Ondes acoustiques appliquées localement, en complément des techniques manuelles.',
