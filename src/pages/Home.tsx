@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Grid, Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+import AppointmentButton from '../components/AppointmentButton';
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
 import Seo from '../components/Seo';
@@ -16,9 +17,10 @@ const Home = () => {
     <Box>
       <Seo page={seo.pages.home} />
       <HeroBanner
-        title="Centre de Chiropraxie"
-        subtitle={cabinet.practitioner}
+        title={`Centre de Chiropraxie à ${cabinet.city}`}
+        subtitle={`${cabinet.practitioner}, chiropracteure`}
         backgroundImage={cabinetImage}
+        height="45vh"
       />
 
       <Section
@@ -31,6 +33,19 @@ const Home = () => {
           Votre thérapeute vous accueille dans un espace calme et apaisant pour prendre soin de votre santé.
           Son approche de la chiropraxie est globale, douce et adaptée à chaque patient.
         </Typography>
+
+        <Typography paragraph>
+          Le cabinet se situe {cabinet.address.toLowerCase()} à {cabinet.city},
+          dans le {cabinet.department}, en {cabinet.region}. Il est installé en
+          rez-de-chaussée, avec un accès de plain-pied et un parking dédié.
+        </Typography>
+
+        <Box sx={{ mt: 4 }}>
+          <AppointmentButton size="large" sx={{ px: 4, py: 1.5, mr: 2, mb: { xs: 2, sm: 0 } }} />
+          <Button variant="outlined" color="primary" component={Link} to="/contact">
+            Voir le plan d'accès
+          </Button>
+        </Box>
       </Section>
 
       <Section
@@ -84,15 +99,7 @@ const Home = () => {
               >
                 Découvrir nos soins
               </Button>
-              <Button 
-                variant="outlined" 
-                color="primary"
-                href={cabinet.doctolib}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Prendre Rendez-vous
-              </Button>
+              <AppointmentButton variant="outlined" />
             </Box>
           </Grid>
         </Grid>

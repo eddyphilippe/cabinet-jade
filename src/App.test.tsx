@@ -11,10 +11,17 @@ describe("Page d'accueil", () => {
     expect(screen.getAllByText(cabinet.practitioner).length).toBeGreaterThan(0);
   });
 
-  it('renvoie vers le bon lien Doctolib pour la prise de rendez-vous', () => {
+  it('renvoie vers la bonne fiche Doctolib depuis chaque bouton de rendez-vous', () => {
     render(<App />);
-    const lien = screen.getByRole('link', { name: /prendre rendez-vous/i });
-    expect(lien).toHaveAttribute('href', cabinet.doctolib);
+    const liens = screen.getAllByRole('link', { name: /prendre rendez-vous/i });
+
+    expect(liens.length).toBeGreaterThan(0);
+    liens.forEach((lien) => {
+      expect(lien).toHaveAttribute('href', cabinet.doctolib);
+      // Un lien ouvert dans un nouvel onglet doit couper l'accès à la page
+      // d'origine, sans quoi le site de destination peut la manipuler.
+      expect(lien).toHaveAttribute('rel', expect.stringContaining('noopener'));
+    });
   });
 
   it("renseigne le titre et la description de la page", async () => {
