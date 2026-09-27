@@ -47,12 +47,13 @@ const Contact = () => {
               pour prendre rendez-vous ou pour obtenir plus d'informations sur notre approche chiropratique.
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-              Votre chiropracteure est disponible pour vous répondre {openingHoursSentence}.
+              Votre chiropracteure est disponible {openingHoursSentence}.
             </Typography>
 
             <AppointmentButton size="large" sx={{ px: 4, py: 1.5 }} />
             <Typography variant="body2" color="text.secondary" sx={{ mt: 1.5 }}>
-              La prise de rendez-vous se fait en ligne sur Doctolib.
+              La prise de rendez-vous se fait en ligne sur Doctolib
+              {cabinet.phone ? ' ou par téléphone.' : '.'}
             </Typography>
           </Grid>
 

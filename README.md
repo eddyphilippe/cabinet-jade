@@ -116,7 +116,8 @@ médicale, de bénéfice thérapeutique, de résultat, de témoignage ni de dipl
 | **Téléphone** | ❌ `phone` vaut `null` dans `src/config/cabinet.ts`. `06 12 34 56 78` était factice ; `0695112755` figurait sur le site associé à l'email personnel du développeur, son appartenance au cabinet reste à confirmer. Rien n'est écrit dans le dépôt tant que le numéro n'est pas vérifié. |
 | **Graphie de la commune** | ❔ Le site écrivait « Creully sur Seulles », la configuration utilise « Creully-sur-Seulles ». À aligner sur la fiche Google Business Profile. |
 | Tarifs (60 € / 50 € / 60 €) | ❔ À confirmer auprès de Jade. |
-| Horaires (Lun-Ven 9h-19h, Sam 9h-13h) | ❔ À confirmer auprès de Jade. Publiés tels quels dans les données structurées. |
+| Horaires (Lun-Ven 10h-19h, Sam 10h-13h) | ✅ Confirmés le 27/09/2026. Publiés dans les données structurées. |
+| Prise de rendez-vous par téléphone | ❔ La mention « ou par téléphone » s'affichera automatiquement dès qu'un numéro sera renseigné dans `cabinet.phone`. Masquée tant qu'aucun numéro n'est validé. |
 | Communes de la zone desservie | ❔ `areas.nearbyTowns` est vide dans `src/config/seo.ts`. À définir avec Jade ; ne pas inventer. |
 | Favicon et icônes | ❔ `favicon.ico`, `logo192.png` et `logo512.png` sont encore ceux de Create React App. À remplacer si Jade a un logo. |
 | Phrase sur l'auto-guérison (`/about`) | ❔ Formulation affirmant un mécanisme thérapeutique, laissée inchangée dans l'attente d'un arbitrage. |

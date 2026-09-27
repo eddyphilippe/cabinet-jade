@@ -115,18 +115,24 @@ export const cabinet: Cabinet = {
    */
   website: 'https://jadephilippe-chiropraxie.fr',
 
-  /** ⚠️ À VALIDER auprès de Jade — repris de la page Contact existante. */
+  /**
+   * Horaires d'ouverture.
+   *
+   * ⚠️ Toute modification ici doit être reportée à la main dans le JSON-LD de
+   * `public/index.html`, qui est statique. Sans quoi le site et les données
+   * lues par Google afficheraient des horaires différents.
+   */
   openingHours: [
     {
       label: 'Du lundi au vendredi',
       days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
+      opens: '10:00',
       closes: '19:00',
     },
     {
       label: 'Samedi',
       days: ['Saturday'],
-      opens: '09:00',
+      opens: '10:00',
       closes: '13:00',
     },
   ],
@@ -146,12 +152,12 @@ export const addressInSentence = cabinet.address.replace(
   (streetType) => streetType.toLowerCase()
 );
 
-/** Horaires résumés : « Du lundi au vendredi : 9h-19h | Samedi : 9h-13h ». */
+/** Horaires résumés : « Du lundi au vendredi : 10h-19h | Samedi : 10h-13h ». */
 export const openingHoursSummary = cabinet.openingHours
   .map((h) => `${h.label} : ${formatHour(h.opens)}-${formatHour(h.closes)}`)
   .join(' | ');
 
-/** Horaires en prose : « du lundi au vendredi de 9h à 19h et le samedi de 9h à 13h ». */
+/** Horaires en prose : « du lundi au vendredi de 10h à 19h et le samedi de 10h à 13h ». */
 export const openingHoursSentence = cabinet.openingHours
   .map((h, i) => {
     const label = i === 0 ? lowerFirst(h.label) : `le ${lowerFirst(h.label)}`;
