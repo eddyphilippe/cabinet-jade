@@ -91,7 +91,7 @@ const About = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <Avatar
                 src={jadePhilippeImage}
-                alt="Dr. Jade Philippe"
+                alt={`${cabinet.practitioner}, chiropracteure à ${cabinet.city}`}
                 sx={{ 
                   width: 200, 
                   height: 200, 
@@ -101,16 +101,16 @@ const About = () => {
                 }}
               />
               <Typography variant="h5" fontWeight={600} gutterBottom>
-                Dr. Jade Philippe
+                {cabinet.practitioner}
               </Typography>
               <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-                Chiropracteure D.C.
+                Chiropracteure
               </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography paragraph>
-              Diplômée de l'Institut Franco-Européen de Chiropratique (IFEC), Dr. Jade Philippe pratique depuis plus de 12 ans. Passionnée par les approches non-invasives du traitement des douleurs vertébrales, elle a développé une expertise dans diverses techniques chiropratiques.
+              Diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>), {cabinet.practitioner} s'est formée en complément à la <strong>prise en charge du sportif</strong> et au <strong>Dry Needling</strong>. Son approche privilégie les techniques manuelles, adaptées aux besoins de chaque patient.
             </Typography>
             <Typography paragraph>
               Sa philosophie de soin est centrée sur le patient et son bien-être global. Elle croit fermement que notre corps a une capacité naturelle d'auto-guérison que la chiropratique peut aider à optimiser. Son approche combine différentes techniques en fonction des besoins spécifiques de chaque patient.
