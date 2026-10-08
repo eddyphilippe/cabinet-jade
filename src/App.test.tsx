@@ -13,6 +13,9 @@ describe("Page d'accueil", () => {
 
   it('renvoie vers la bonne fiche Doctolib depuis chaque bouton de rendez-vous', () => {
     render(<App />);
+    expect(cabinet.doctolib).toBe(
+      'https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe'
+    );
     const liens = screen.getAllByRole('link', { name: /prendre rendez-vous/i });
 
     expect(liens.length).toBeGreaterThan(0);

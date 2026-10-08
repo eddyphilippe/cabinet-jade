@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Button, Grid, Card, CardContent } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+import AppointmentButton from '../components/AppointmentButton';
 import HeroBanner from '../components/HeroBanner';
 import Section from '../components/Section';
 import Seo from '../components/Seo';
@@ -84,16 +85,7 @@ const Pricing = () => {
                     ))}
                   </Box>
                   
-                  <Button 
-                    variant="contained" 
-                    color="primary"
-                    component={Link}
-                    to="/contact"
-                    fullWidth
-                    sx={{ mt: 3 }}
-                  >
-                    Prendre Rendez-vous
-                  </Button>
+                  <AppointmentButton fullWidth sx={{ mt: 3 }} />
                 </CardContent>
               </Card>
             </Grid>

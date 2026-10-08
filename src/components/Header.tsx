@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
 
+import AppointmentButton from './AppointmentButton';
 import { cabinet } from '../config/cabinet';
 
 const Header = () => {
@@ -66,6 +67,9 @@ const Header = () => {
           </ListItem>
         ))}
       </List>
+      <Box sx={{ px: 2, pt: 1 }}>
+        <AppointmentButton fullWidth />
+      </Box>
     </Box>
   );
 
@@ -92,7 +96,7 @@ const Header = () => {
 
             {/* Desktop Menu */}
             {!isMobile && (
-              <Box sx={{ display: 'flex' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 {navItems.map((item) => (
                   <Button
                     key={item.name}
@@ -100,7 +104,7 @@ const Header = () => {
                     to={item.path}
                     color="inherit"
                     sx={{
-                      mx: 1,
+                      mx: 0.5,
                       color: isActive(item.path) ? 'primary.main' : 'text.primary',
                       fontWeight: isActive(item.path) ? 600 : 400,
                       '&:hover': {
@@ -112,18 +116,24 @@ const Header = () => {
                     {item.name}
                   </Button>
                 ))}
+                <AppointmentButton size="small" sx={{ ml: 1, py: 0.5, px: 1.25 }}>
+                  RDV
+                </AppointmentButton>
               </Box>
             )}
 
             {/* Mobile Menu Button */}
             {isMobile && (
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="end"
-                onClick={handleDrawerToggle}
-                sx={{ ml: 2 }}
-              >
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <AppointmentButton size="small" sx={{ px: 1.25, py: 0.5 }}>
+                  RDV
+                </AppointmentButton>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="end"
+                  onClick={handleDrawerToggle}
+                >
                 <div style={{ width: 24, height: 24 }}>
                   <Box
                     sx={{
@@ -153,7 +163,8 @@ const Header = () => {
                     }}
                   />
                 </div>
-              </IconButton>
+                </IconButton>
+              </Box>
             )}
           </Toolbar>
         </Container>

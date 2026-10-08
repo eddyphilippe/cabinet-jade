@@ -17,6 +17,39 @@ Modèle à copier :
 
 ---
 
+## 2026-10-08 — Logo Doctolib sur les boutons de rendez-vous
+
+**Objectif :** faire apparaître le logotype Doctolib à côté du libellé
+« Prendre rendez-vous », pour que le patient identifie le service.
+
+**Fichiers modifiés :** `src/components/AppointmentButton.tsx`,
+`src/assets/images/logo-doctolib-blue.png`.
+
+**Résultat :** tous les boutons passent par le même composant. Le visuel vient
+des fichiers publiés par Doctolib ; il n'est pas redessiné.
+
+**Commit :** voir `git log` du 08/10/2026.
+
+---
+
+## 2026-10-08 — Bouton Doctolib visible sur tout le site
+
+**Objectif :** rendre la prise de rendez-vous accessible depuis n'importe
+quelle page, vers la fiche Doctolib confirmée
+`https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe`.
+
+**Fichiers modifiés :** `src/components/Header.tsx`, `src/components/Footer.tsx`,
+`src/pages/Pricing.tsx`, `src/config/cabinet.ts`.
+
+**Résultat :** le bouton existait déjà sur l'accueil et Contact, mais pas dans
+l'en-tête. Sur Tarifs, le libellé « Prendre rendez-vous » menait à la page
+Contact. Le lien Doctolib reste centralisé dans `cabinet.ts` ; aucun composant
+ne le recopie en dur.
+
+**Commit :** voir `git log` du 08/10/2026.
+
+---
+
 ## 2026-09-27 — Retrait de la page Équipement
 
 **Objectif :** retirer la page Équipement du site, en conservant la

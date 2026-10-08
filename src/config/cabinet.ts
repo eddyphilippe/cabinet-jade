@@ -83,7 +83,7 @@ export const cabinet: Cabinet = {
     display: '06 95 11 27 55',
   },
 
-  /** Prise de rendez-vous en ligne (lien vérifié le 27/09/2026). */
+  /** Prise de rendez-vous en ligne (lien confirmé le 08/10/2026). */
   doctolib:
     'https://www.doctolib.fr/chiropracteur/creully-sur-seulles/jade-philippe',
 

@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 
+import AppointmentButton from './AppointmentButton';
 import { cabinet } from '../config/cabinet';
 
 const Footer = () => {
@@ -48,6 +49,7 @@ const Footer = () => {
             <Typography variant="body2" gutterBottom>
               <strong>Email :</strong> {cabinet.email}
             </Typography>
+            <AppointmentButton color="secondary" sx={{ mt: 2 }} />
           </Grid>
 
           {/* Quick Links */}
