@@ -64,7 +64,7 @@ export const seo = {
     about: {
       path: '/about',
       title: `Cabinet de chiropraxie à ${areas.city} | ${cabinet.practitioner}`,
-      description: `Le cabinet de chiropraxie de ${cabinet.practitioner} à ${areas.city} : accès sans marche, parking dédié, et le parcours de votre chiropracteure.`,
+      description: `Le cabinet de chiropraxie de ${cabinet.practitioner} à ${areas.city} : accès sans marche, parking dédié, et le parcours de votre chiropracteur.`,
     },
     services: {
       path: '/services',

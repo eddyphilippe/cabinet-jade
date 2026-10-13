@@ -37,7 +37,7 @@ const Contact = () => {
       />
 
       <Section
-        title="Votre Chiropracteure"
+        title="Votre chiropracteur"
       >
         <Grid container spacing={4}>
           
@@ -47,7 +47,7 @@ const Contact = () => {
               pour prendre rendez-vous ou pour obtenir plus d'informations sur notre approche chiropratique.
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-              Votre chiropracteure est disponible {openingHoursSentence}.
+              Votre chiropracteur est disponible {openingHoursSentence}.
             </Typography>
 
             <AppointmentButton size="large" sx={{ px: 4, py: 1.5 }} />

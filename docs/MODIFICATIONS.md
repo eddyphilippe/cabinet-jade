@@ -17,6 +17,39 @@ Modèle à copier :
 
 ---
 
+## 2026-10-13 — Libellé unique « chiropracteur »
+
+**Objectif :** remplacer partout « chiropracteure » par « chiropracteur »,
+y compris le sous-titre de l'accueil, pour aligner le site sur le titre
+déjà utilisé dans le référencement.
+
+**Fichiers modifiés :** `src/pages/Home.tsx`, `src/pages/About.tsx`,
+`src/pages/Contact.tsx`, `src/config/seo.ts`.
+
+**Résultat :** le mot affiché est le même que `cabinet.profession`. Les
+accords féminins inchangés (« diplômée ») restent, car seule la dénomination
+du métier change.
+
+**Commit :** non commité au moment de la modification.
+
+---
+
+## 2026-10-08 — Fichier de validation Google Search Console
+
+**Objectif :** prouver à Search Console que le domaine
+`https://jadephilippe-chiropraxie.fr` appartient bien au cabinet, afin de
+pouvoir envoyer le sitemap et demander l'indexation.
+
+**Fichiers modifiés :** `public/googlea517adb2ab31285c.html`,
+`public/_redirects` (exception pour ne pas servir `index.html` à la place).
+
+**Résultat :** Google doit pouvoir lire le fichier à
+`https://jadephilippe-chiropraxie.fr/googlea517adb2ab31285c.html`.
+
+**Commit :** non commité au moment de la mise en ligne.
+
+---
+
 ## 2026-10-08 — Logo Doctolib sur les boutons de rendez-vous
 
 **Objectif :** faire apparaître le logotype Doctolib à côté du libellé

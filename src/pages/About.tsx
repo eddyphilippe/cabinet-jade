@@ -101,7 +101,7 @@ const About = () => {
       </Section>
 
       <Section
-        title="Votre Chiropracteure"
+        title="Votre chiropracteur"
         background="light"
         centered
       >
@@ -110,7 +110,7 @@ const About = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <Avatar
                 src={jadePhilippeImage}
-                alt={`${cabinet.practitioner}, chiropracteure à ${cabinet.city}`}
+                alt={`${cabinet.practitioner}, ${cabinet.profession.toLowerCase()} à ${cabinet.city}`}
                 sx={{ 
                   width: 200, 
                   height: 200, 
@@ -123,7 +123,7 @@ const About = () => {
                 {cabinet.practitioner}
               </Typography>
               <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-                Chiropracteure
+                {cabinet.profession}
               </Typography>
             </Box>
           </Grid>

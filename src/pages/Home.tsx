@@ -18,7 +18,7 @@ const Home = () => {
       <Seo page={seo.pages.home} />
       <HeroBanner
         title={`Centre de Chiropraxie à ${cabinet.city}`}
-        subtitle={`${cabinet.practitioner}, chiropracteure`}
+        subtitle={`${cabinet.practitioner}, ${cabinet.profession.toLowerCase()}`}
         backgroundImage={cabinetImage}
         height="45vh"
       />
@@ -68,7 +68,7 @@ const Home = () => {
                 {cabinet.practitioner}
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
-                Chiropracteure diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>)
+                Chiropracteur diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>)
               </Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
                 Formation complémentaire en <strong>prise en charge du sportif</strong> et en <strong>Dry Needling</strong>
@@ -78,7 +78,7 @@ const Home = () => {
           
           <Grid item xs={12} md={8}>
             <Typography variant="h6" gutterBottom>
-              Rôle de votre Chiropracteure
+              Rôle de votre chiropracteur
             </Typography>
             
             <Typography paragraph>
