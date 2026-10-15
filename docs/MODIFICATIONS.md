@@ -17,6 +17,21 @@ Modèle à copier :
 
 ---
 
+## 2026-10-15 — Balise Google Ads
+
+**Objectif :** installer la balise demandée par Google Ads, pour que le
+compte puisse mesurer les visites issues des campagnes.
+
+**Fichiers modifiés :** `public/index.html`
+
+**Résultat :** chargement de `GT-577MXS7J` avec destination `AW-18491848216`
+sur toutes les pages. Pas d'extrait d'événement de conversion (clic RDV,
+etc.) : Ads n'en a pas fourni.
+
+**Commit :** voir `git log` du 15/10/2026.
+
+---
+
 ## 2026-10-13 — Libellé unique « chiropracteur »
 
 **Objectif :** remplacer partout « chiropracteure » par « chiropracteur »,
@@ -30,7 +45,7 @@ déjà utilisé dans le référencement.
 accords féminins inchangés (« diplômée ») restent, car seule la dénomination
 du métier change.
 
-**Commit :** non commité au moment de la modification.
+**Commit :** voir `git log` du 13/10/2026.
 
 ---
 

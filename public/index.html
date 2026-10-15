@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!--
+      Balise Google (gtag.js) — compte Ads du cabinet.
+
+      GT-577MXS7J : balise Google.
+      AW-18491848216 : destination Google Ads (suivi des campagnes).
+
+      Google demande ce bloc juste apres <head>, sur toutes les pages.
+      Ici le fichier est le squelette Create React App : une seule insertion
+      couvre tout le site. Ne pas ajouter une seconde balise Google ailleurs.
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-577MXS7J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GT-577MXS7J');
+      gtag('config', 'AW-18491848216');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#219ebc" />
