@@ -7,14 +7,39 @@
       GT-577MXS7J : balise Google.
       AW-18491848216 : destination Google Ads (suivi des campagnes).
 
+      Consent Mode v2 : par defaut tout est refuse. Le bandeau React
+      (CookieBanner) met a jour le consentement. Un visiteur deja d'accord
+      est relu ici avant gtag('config'), pour eviter un ping trop tot.
+
       Google demande ce bloc juste apres <head>, sur toutes les pages.
       Ici le fichier est le squelette Create React App : une seule insertion
       couvre tout le site. Ne pas ajouter une seconde balise Google ailleurs.
     -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-577MXS7J"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      try {
+        if (localStorage.getItem('cabinet-jade-cookie-consent') === 'granted') {
+          gtag('consent', 'update', {
+            ad_storage: 'granted',
+            analytics_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted'
+          });
+        }
+      } catch (e) {}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GT-577MXS7J"></script>
+    <script>
       gtag('js', new Date());
       gtag('config', 'GT-577MXS7J');
       gtag('config', 'AW-18491848216');

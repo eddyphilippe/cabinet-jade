@@ -63,3 +63,25 @@ describe('Coordonnées du cabinet', () => {
     expect(cabinet.website).not.toMatch(/\/$/);
   });
 });
+
+describe('Mesure des clics rendez-vous', () => {
+  const gtag = jest.fn();
+
+  beforeEach(() => {
+    gtag.mockReset();
+    (window as unknown as { gtag: typeof gtag }).gtag = gtag;
+  });
+
+  afterEach(() => {
+    delete (window as unknown as { gtag?: typeof gtag }).gtag;
+  });
+
+  it('envoie generate_lead vers la balise Google au clic Doctolib', () => {
+    render(<App />);
+    const liens = screen.getAllByRole('link', { name: /prendre rendez-vous/i });
+    liens[0].click();
+    expect(gtag).toHaveBeenCalledWith('event', 'generate_lead', {
+      method: 'doctolib',
+    });
+  });
+});

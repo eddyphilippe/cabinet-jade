@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Button, ButtonProps } from '@mui/material';
 
 import doctolibLogo from '../assets/images/logo-doctolib-blue.png';
+import { trackRdvClick } from '../config/analytics';
 import { cabinet } from '../config/cabinet';
 
 // `ButtonProps<'a'>` et non `ButtonProps` : avec un `href`, MUI rend une
@@ -24,6 +25,7 @@ const AppointmentButton = ({
   color = 'primary',
   size = 'medium',
   sx,
+  onClick,
   ...props
 }: AppointmentButtonProps) => {
   const compact = size === 'small';
@@ -36,6 +38,10 @@ const AppointmentButton = ({
     variant={variant}
     color={color}
     size={size}
+    onClick={(event) => {
+      trackRdvClick();
+      onClick?.(event);
+    }}
     sx={[
       { gap: compact ? 0.75 : 1 },
       ...(Array.isArray(sx) ? sx : sx != null ? [sx] : []),

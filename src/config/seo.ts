@@ -91,6 +91,11 @@ export const seo = {
       title: `Contact et rendez-vous | ${cabinet.practitioner}, chiropracteur`,
       description: `Adresse, horaires et prise de rendez-vous en ligne du cabinet de chiropraxie de ${cabinet.practitioner}, ${addressInSentence} à ${areas.city}.`,
     },
+    confidentialite: {
+      path: '/confidentialite',
+      title: `Confidentialité et cookies | ${cabinet.name}`,
+      description: `Cookies et mesure publicitaire du site du cabinet de chiropraxie de ${cabinet.practitioner} à ${areas.city}.`,
+    },
     notFound: {
       path: '*',
       title: `Page introuvable | ${cabinet.name}`,

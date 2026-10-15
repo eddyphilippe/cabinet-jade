@@ -14,13 +14,18 @@
 | Commande de build | `npm run build` |
 | Dossier de sortie | `build` |
 | Version de Node | 22, fixée par le fichier `.node-version` |
-| Routage | `public/_redirects` (`/* /index.html 200`) |
+| Routage | `public/_redirects` (fichier Search Console en exception, puis `/* /index.html 200`) |
 
 ## Mettre le site en ligne
 
 Cloudflare Pages étant connecté au dépôt GitHub, le déploiement est
 automatique : **tout `git push` sur `main` déclenche une mise en production**.
 Il n'y a aucune commande de déploiement à taper.
+
+Si le projet Pages affiche **« Aucune connexion Git »**, les push n'arrivent
+plus en ligne. Dans Cloudflare : Workers et Pages → cabinet-jade →
+Paramètres → Référentiel Git → `eddyphilippe/cabinet-jade`, branche `main`,
+commande `npm run build`, dossier `build`. Vérifié le 15/10/2026.
 
 ```bash
 CI=true npm run build     # 1. vérifier AVANT de pousser (voir ci-dessous)

@@ -11,6 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import AppointmentButton from './AppointmentButton';
+import { openCookieSettings } from '../config/analytics';
 import { cabinet } from '../config/cabinet';
 
 const Footer = () => {
@@ -97,13 +98,39 @@ const Footer = () => {
 
         <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)', my: 4 }} />
         
-        <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'space-between' }, flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', textAlign: { xs: 'center', md: 'left' } }}>
+        <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'space-between' }, flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', textAlign: { xs: 'center', md: 'left' }, gap: 1 }}>
           <Typography variant="body2" sx={{ opacity: 0.8 }}>
             © {currentYear} {cabinet.name}. Tous droits réservés.
           </Typography>
-          <Typography variant="body2" sx={{ mt: { xs: 1, md: 0 }, opacity: 0.7 }}>
-            Conçu et développé avec soin pour votre bien-être
-          </Typography>
+          <Stack direction="row" spacing={2} sx={{ mt: { xs: 1, md: 0 } }}>
+            <MuiLink
+              component={Link}
+              to="/confidentialite"
+              color="inherit"
+              underline="hover"
+              sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}
+            >
+              Confidentialité
+            </MuiLink>
+            <MuiLink
+              component="button"
+              type="button"
+              onClick={openCookieSettings}
+              color="inherit"
+              underline="hover"
+              sx={{
+                opacity: 0.8,
+                '&:hover': { opacity: 1 },
+                background: 'none',
+                border: 0,
+                padding: 0,
+                font: 'inherit',
+                cursor: 'pointer',
+              }}
+            >
+              Cookies
+            </MuiLink>
+          </Stack>
         </Box>
       </Container>
     </Box>

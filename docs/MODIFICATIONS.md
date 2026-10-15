@@ -17,6 +17,47 @@ Modèle à copier :
 
 ---
 
+## 2026-10-15 — Search Console, conversion RDV, cookies
+
+**Objectif :** terminer le branchement Google : vérifier le domaine dans
+Search Console, mesurer les clics vers Doctolib, et ne déposer les cookies
+publicitaires qu’après un choix explicite.
+
+**Fichiers modifiés :** `public/googlea517adb2ab31285c.html`,
+`public/_redirects`, `public/index.html` (Consent Mode v2),
+`src/config/analytics.ts`, `src/components/AppointmentButton.tsx`,
+`src/components/CookieBanner.tsx`, `src/pages/Confidentialite.tsx`,
+`src/App.tsx`, `src/config/seo.ts`, `public/sitemap.xml`,
+`src/components/Footer.tsx`.
+
+**Résultat :**
+- le fichier de vérification Search Console est servi tel quel (pas avalé
+  par le fallback SPA) ;
+- chaque clic « Prendre rendez-vous » envoie l’événement `generate_lead`
+  (à rattacher comme conversion dans Google Ads ; le libellé `AW-…/…`
+  n’a pas encore été fourni) ;
+- bandeau cookies Accepter / Refuser, choix mémorisé, page
+  `/confidentialite`.
+
+**Commit :** voir `git log` du 15/10/2026.
+
+---
+
+## 2026-10-15 — Reconnexion Git Cloudflare Pages
+
+**Objectif :** le site public ne prenait plus les `git push` : le projet
+Pages `cabinet-jade` affichait « Aucune connexion Git ».
+
+**Fichiers modifiés :** aucun dans le dépôt. Action dans le tableau
+Cloudflare : Workers et Pages → cabinet-jade → Paramètres → connexion du
+dépôt `eddyphilippe/cabinet-jade`, branche `main`, commande
+`npm run build`, dossier `build`.
+
+**Résultat :** déploiement `9cf5d52` en production. Les push suivants
+redéploient tout seuls.
+
+---
+
 ## 2026-10-15 — Suppression de l'archive GitHub Pages
 
 **Objectif :** ne plus conserver l'ancien build dans le dépôt, une fois

@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 // Composants
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 import ScrollManager from './components/ScrollManager';
 
 // Pages
@@ -13,6 +14,7 @@ import About from './pages/About';
 import SoinsProposés from './pages/SoinsProposés';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
+import Confidentialite from './pages/Confidentialite';
 import NotFound from './pages/NotFound';
 
 // Thème personnalisé
@@ -88,10 +90,12 @@ function App() {
             */}
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/confidentialite" element={<Confidentialite />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
+        <CookieBanner />
       </Router>
     </ThemeProvider>
   );
