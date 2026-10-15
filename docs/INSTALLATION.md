@@ -89,8 +89,7 @@ Ces quatre commandes sont celles réellement déclarées dans `package.json` :
 |---|---|
 | `npm start` | serveur de développement sur le port 3000 |
 | `npm run build` | build de production dans `build/` |
-| `npm test` | lance les tests (un seul test de démonstration existe) |
-| `npm run deploy` | publie `build/` sur la branche `gh-pages` — **obsolète**, voir `DEPLOIEMENT.md` |
+| `npm test` | lance les tests |
 
 `npm run eject` existe aussi : **ne jamais l'exécuter**, l'opération est
 irréversible.

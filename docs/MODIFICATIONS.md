@@ -17,6 +17,22 @@ Modèle à copier :
 
 ---
 
+## 2026-10-15 — Extinction de GitHub Pages
+
+**Objectif :** retirer l'ancien site
+`https://eddyphilippe.github.io/cabinet-jade/`, qui concurrençait le domaine
+officiel et affichait encore des coordonnées du développeur.
+
+**Fichiers modifiés :** GitHub Pages désactivé ; ancien build déplacé vers
+`archives/github-pages-2025-03/` ; `package.json` (scripts `deploy` /
+`predeploy` et dépendance `gh-pages` retirés) ; `docs/DEPLOIEMENT.md`.
+
+**Résultat :** seul `https://jadephilippe-chiropraxie.fr` doit rester public.
+
+**Commit :** voir `git log` du 15/10/2026.
+
+---
+
 ## 2026-10-15 — Balise Google Ads
 
 **Objectif :** installer la balise demandée par Google Ads, pour que le

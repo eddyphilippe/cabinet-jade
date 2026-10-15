@@ -122,22 +122,14 @@ git push                   # redéploie automatiquement
 
 Ne jamais utiliser `git push --force` pour revenir en arrière.
 
-## L'ancien hébergement GitHub Pages
+## Ancien hébergement GitHub Pages (éteint le 15/10/2026)
 
-Le dossier `docs/` de la branche `main` est encore publié par GitHub Pages à
-l'adresse https://eddyphilippe.github.io/cabinet-jade/. Il sert un build du
-**22 mars 2025**, qui affiche l'email et le téléphone personnels du
-développeur et ne contient pas le bouton Doctolib.
+GitHub Pages a été désactivé. L'adresse
+https://eddyphilippe.github.io/cabinet-jade/ ne doit plus servir le site.
 
-**À neutraliser dès que Cloudflare Pages sert le site**, pour éviter que Google
-n'indexe deux sites concurrents :
+L'ancien build (mars 2025) est conservé dans
+`archives/github-pages-2025-03/` pour l'historique. `docs/` ne contient plus
+que la documentation de maintenance.
 
-1. Sur GitHub : **Settings → Pages → Source → None**.
-2. Déplacer l'ancien build hors de `docs/` avec `git mv` (par exemple vers
-   `archives/`), afin d'en conserver l'historique.
-3. Retirer le script `deploy` et la dépendance `gh-pages` de `package.json`.
-
-Ces trois étapes touchent à l'hébergement : **à valider avant exécution**.
-
-> `npm run deploy` (`gh-pages -d build`) appartient à cet ancien montage. Ne
-> pas l'utiliser : il republierait le site à une seconde adresse.
+Ne pas réactiver Pages, et ne pas republier avec `gh-pages` : le site officiel
+est uniquement Cloudflare Pages, `https://jadephilippe-chiropraxie.fr`.

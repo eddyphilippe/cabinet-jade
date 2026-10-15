@@ -45,11 +45,7 @@ Hébergeur **Cloudflare Pages**, branche `main` : tout `git push` déclenche la
 mise en production. Adresse officielle : **https://jadephilippe-chiropraxie.fr**
 (sans `www`, la version `www` redirige en 301).
 
-Ne pas utiliser `npm run deploy`, hérité de l'ancien hébergement.
-
-⚠️ Une ancienne page **GitHub Pages** sert encore un build du 22 mars 2025 à
-l'adresse `eddyphilippe.github.io/cabinet-jade`, avec des coordonnées erronées.
-Procédure de neutralisation dans `docs/DEPLOIEMENT.md`.
+GitHub Pages a été éteint le 15/10/2026. Ne pas le réactiver.
 
 Aucun build hébergé n'avait jamais abouti, à cause d'un import inutilisé combiné
 au `CI=true` des plateformes d'hébergement. Corrigé le 27/09/2026, explication
@@ -77,7 +73,8 @@ src/
   assets/       images
   styles/       thème et styles globaux
 public/         index.html, robots.txt, sitemap.xml, manifest.json, _redirects
-docs/           documentation *.md + ancien build GitHub Pages (à archiver)
+docs/           documentation de maintenance (*.md)
+archives/       ancien build GitHub Pages (hors ligne)
 ```
 
 Ajouter une page implique trois fichiers : `src/App.tsx` pour la route,

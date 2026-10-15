@@ -68,14 +68,10 @@ n'envisager que si l'indexation pose réellement problème.
 
 ### Risque de double indexation
 
-Trois adresses pourraient servir le même contenu : l'ancienne page GitHub Pages,
-l'adresse technique en `.pages.dev` de Cloudflare, et le domaine officiel. Google
-risque de les traiter comme des sites distincts, ce qui dilue le référencement.
-
-L'adresse officielle est **https://jadephilippe-chiropraxie.fr**, sans `www`.
-C'est elle que déclarent les balises canonical et le sitemap. Restent à traiter :
-la redirection 301 depuis `www`, et la neutralisation de GitHub Pages — voir la
-fin de `DEPLOIEMENT.md`.
+GitHub Pages a été éteint le 15/10/2026. Restent éventuellement l'adresse
+technique en `.pages.dev` de Cloudflare et le domaine officiel. L'adresse
+officielle est **https://jadephilippe-chiropraxie.fr**, sans `www` : canonical,
+sitemap, et redirection 301 depuis `www`.
 
 ## Titres et descriptions
 

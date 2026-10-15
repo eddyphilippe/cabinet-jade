@@ -161,7 +161,7 @@ dans `DEPLOIEMENT.md`.
 - `npm run eject` — irréversible, casse définitivement l'outillage du projet.
 - `npm audit fix --force` — met à jour `react-scripts` de force et casse le build.
 - `git push --force` — peut effacer l'historique sur GitHub.
-- `npm run deploy` — republie le site à une ancienne adresse GitHub Pages.
+- Réactiver GitHub Pages ou republier l'archive `archives/github-pages-2025-03/`.
 - Modifier `package-lock.json` à la main.
 - Écrire une adresse, un email ou un téléphone directement dans une page.
 - Inventer une information sur le cabinet, une qualification ou un bénéfice
