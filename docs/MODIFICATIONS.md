@@ -17,6 +17,21 @@ Modèle à copier :
 
 ---
 
+## 2026-10-15 — Libellé de conversion Google Ads
+
+**Objectif :** Ads ne détectait pas l'action « Prise de rendez-vous »,
+parce que le site envoyait `generate_lead` sans le couple
+ID + libellé de l'action.
+
+**Fichiers modifiés :** `src/config/analytics.ts`
+
+**Résultat :** chaque clic RDV envoie aussi
+`AW-18491848216/Zy3uCObj2Z0dEJjszPFE`.
+
+**Commit :** voir `git log` du 15/10/2026.
+
+---
+
 ## 2026-10-15 — Search Console, conversion RDV, cookies
 
 **Objectif :** terminer le branchement Google : vérifier le domaine dans

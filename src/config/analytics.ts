@@ -10,12 +10,10 @@ export const analytics = {
   googleTagId: 'GT-577MXS7J',
   adsId: 'AW-18491848216',
   /**
-   * Identifiant complet d'une action de conversion Google Ads
-   * (`AW-18491848216/libellé`). `null` tant qu'Ads n'a pas fourni le
-   * libellé : le clic RDV envoie l'événement recommandé `generate_lead`,
-   * à rattacher comme conversion dans le compte Ads.
+   * Action de conversion Ads « Prise de rendez-vous », libellé fourni le
+   * 15/10/2026. Le clic RDV envoie aussi `generate_lead`.
    */
-  conversionSendTo: null as string | null,
+  conversionSendTo: 'AW-18491848216/Zy3uCObj2Z0dEJjszPFE',
   consentStorageKey: 'cabinet-jade-cookie-consent',
 };
 

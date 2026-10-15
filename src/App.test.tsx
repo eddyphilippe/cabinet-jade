@@ -83,5 +83,8 @@ describe('Mesure des clics rendez-vous', () => {
     expect(gtag).toHaveBeenCalledWith('event', 'generate_lead', {
       method: 'doctolib',
     });
+    expect(gtag).toHaveBeenCalledWith('event', 'conversion', {
+      send_to: 'AW-18491848216/Zy3uCObj2Z0dEJjszPFE',
+    });
   });
 });
