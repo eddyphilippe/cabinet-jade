@@ -22,7 +22,6 @@ Node est installé en keg-only via Homebrew. Si `node` est introuvable :
 - `src/pages/` — une page par route, déclarées dans `src/App.tsx`
 - `src/components/` — `Header`, `Footer`, `HeroBanner`, `Section`
 - `docs/` — documentation de maintenance (`*.md`)
-- `archives/` — ancien build GitHub Pages (site éteint le 15/10/2026)
 - `build/` — sortie de `npm run build`, non versionnée
 
 ## Coordonnées du cabinet

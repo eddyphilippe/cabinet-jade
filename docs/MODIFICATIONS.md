@@ -17,6 +17,19 @@ Modèle à copier :
 
 ---
 
+## 2026-10-15 — Suppression de l'archive GitHub Pages
+
+**Objectif :** ne plus conserver l'ancien build dans le dépôt, une fois
+GitHub Pages éteint.
+
+**Fichiers modifiés :** suppression de `archives/github-pages-2025-03/`.
+
+**Résultat :** plus aucune copie de l'ancien site dans le projet.
+
+**Commit :** voir `git log` du 15/10/2026.
+
+---
+
 ## 2026-10-15 — Extinction de GitHub Pages
 
 **Objectif :** retirer l'ancien site

@@ -74,7 +74,6 @@ src/
   styles/       thème et styles globaux
 public/         index.html, robots.txt, sitemap.xml, manifest.json, _redirects
 docs/           documentation de maintenance (*.md)
-archives/       ancien build GitHub Pages (hors ligne)
 ```
 
 Ajouter une page implique trois fichiers : `src/App.tsx` pour la route,

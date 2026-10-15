@@ -127,9 +127,8 @@ Ne jamais utiliser `git push --force` pour revenir en arrière.
 GitHub Pages a été désactivé. L'adresse
 https://eddyphilippe.github.io/cabinet-jade/ ne doit plus servir le site.
 
-L'ancien build (mars 2025) est conservé dans
-`archives/github-pages-2025-03/` pour l'historique. `docs/` ne contient plus
-que la documentation de maintenance.
+L'ancien build a été supprimé du dépôt le 15/10/2026. `docs/` ne contient
+plus que la documentation de maintenance.
 
-Ne pas réactiver Pages, et ne pas republier avec `gh-pages` : le site officiel
-est uniquement Cloudflare Pages, `https://jadephilippe-chiropraxie.fr`.
+Ne pas réactiver Pages : le site officiel est uniquement Cloudflare Pages,
+`https://jadephilippe-chiropraxie.fr`.
