@@ -45,7 +45,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.25))',
+          background: 'linear-gradient(to right, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.1))',
           zIndex: 0
         }
       }}

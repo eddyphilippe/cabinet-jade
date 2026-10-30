@@ -17,6 +17,14 @@ Modèle à copier :
 
 ---
 
+## 2026-10-30 — Retour à la luminosité précédente de la photo
+
+**Objectif :** retirer le contraste renforcé, jugé trop sombre par l’utilisateur.
+
+**Résultat :** rétablissement du dégradé d’origine ; hauteur adaptative, typographie et superposition du texte conservées pour éviter le texte coupé.
+
+---
+
 ## 2026-10-30 — Bandeau photo et texte adaptatifs
 
 **Objectif :** éviter que le titre et le sous-titre de l’accueil débordent du bandeau photo, notamment sur mobile et en paysage.
