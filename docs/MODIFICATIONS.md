@@ -17,6 +17,16 @@ Modèle à copier :
 
 ---
 
+## 2026-10-30 — Bandeau photo et texte adaptatifs
+
+**Objectif :** éviter que le titre et le sous-titre de l’accueil débordent du bandeau photo, notamment sur mobile et en paysage.
+
+**Fichiers modifiés :** `src/components/HeroBanner.tsx`.
+
+**Résultat :** la hauteur du bandeau s’adapte au contenu, avec une hauteur minimale et des marges verticales. Le titre dispose de plus de largeur, la typographie s’adapte aux petits écrans et les calques photo, dégradé et texte sont explicitement superposés pour garantir la lisibilité. La correction bénéficie également aux bandeaux des pages internes.
+
+---
+
 ## 2026-10-30 — Relecture et personnalisation des textes
 
 **Objectif :** rendre le site plus personnel, clarifier la première visite et corriger les formulations trop affirmatives.

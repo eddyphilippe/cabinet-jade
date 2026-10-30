@@ -17,7 +17,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   return (
     <Box
       sx={{
-        height,
+        minHeight: height,
+        height: 'auto',
+        py: { xs: 5, sm: 6, md: 8 },
+        isolation: 'isolate',
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
@@ -33,7 +36,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.85)',
-          zIndex: -1
+          zIndex: 0
         },
         '&::after': {
           content: '""',
@@ -42,20 +45,22 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(to right, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.1))',
-          zIndex: -1
+          background: 'linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.25))',
+          zIndex: 0
         }
       }}
     >
-      <Container maxWidth="lg">
-        <Box sx={{ maxWidth: { xs: '100%', md: '60%' } }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        <Box sx={{ maxWidth: { xs: '100%', md: '80%', lg: '75%' } }}>
           <Typography
             variant="h2"
             component="h1"
             sx={{
               color: 'white',
               fontWeight: 700,
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              fontSize: { xs: '2rem', sm: '2.75rem', md: '3.5rem' },
+              lineHeight: 1.2,
+              overflowWrap: 'break-word',
               textShadow: '0 2px 10px rgba(0,0,0,0.3)',
               mb: 2
             }}
@@ -70,7 +75,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
                 color: 'white',
                 opacity: 0.9,
                 fontWeight: 400,
-                fontSize: { xs: '1.3rem', md: '1.8rem' },
+                fontSize: { xs: '1.125rem', sm: '1.3rem', md: '1.6rem' },
                 textShadow: '0 2px 8px rgba(0,0,0,0.3)',
                 lineHeight: 1.5
               }}
