@@ -27,8 +27,8 @@ const Header = () => {
 
   const navItems = [
     { name: 'Accueil', path: '/' },
-    { name: 'Le Cabinet', path: '/about' },
-    { name: 'Soins Proposés', path: '/services' },
+    { name: 'Le cabinet', path: '/about' },
+    { name: 'Soins proposés', path: '/services' },
     { name: 'Tarifs', path: '/pricing' },
     { name: 'Contact', path: '/contact' }
   ];
@@ -44,7 +44,7 @@ const Header = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', py: 2 }}>
       <Typography variant="h6" component="div" sx={{ mb: 2 }}>
-        {cabinet.shortName}
+        {cabinet.practitioner}
       </Typography>
       <List>
         {navItems.map((item) => (
@@ -91,7 +91,7 @@ const Header = () => {
                 alignItems: 'center',
               }}
             >
-              {cabinet.shortName}
+              {cabinet.practitioner}
             </Typography>
 
             {/* Desktop Menu */}
@@ -130,7 +130,7 @@ const Header = () => {
                 </AppointmentButton>
                 <IconButton
                   color="inherit"
-                  aria-label="open drawer"
+                  aria-label="Ouvrir le menu"
                   edge="end"
                   onClick={handleDrawerToggle}
                 >

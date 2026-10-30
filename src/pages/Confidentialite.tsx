@@ -14,8 +14,8 @@ const Confidentialite = () => {
       <Section title="Confidentialité et cookies" titleVariant="h1" maxWidth="md">
         <Stack spacing={3}>
           <Typography variant="body1" color="text.secondary">
-            Cette page décrit uniquement ce que ce site fait réellement. Elle
-            n’invente ni fichier client, ni newsletter, ni compte utilisateur.
+            Cette page explique l’utilisation des cookies sur ce site, les données
+            transmises aux services concernés et les moyens de gérer vos choix.
           </Typography>
 
           <Box>

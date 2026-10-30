@@ -13,23 +13,23 @@ import { seo } from '../config/seo';
 const Pricing = () => {
   const pricingPlans = [
     {
-      title: 'Première Consultation',
-      price: '60€',
-      description: 'Examen complet, anamnèse et premier traitement',
+      title: 'Première consultation',
+      price: '60 €',
+      description: 'Échange sur votre santé, examen et soins adaptés',
       features: [
         'Bilan de chiropraxie complet',
-        'Anamnèse détaillée',
-        'Premier ajustement vertébral',
+        'Échange sur vos symptômes et vos antécédents',
+        'Premier soin si votre situation le permet',
         'Plan de traitement personnalisé'
       ]
     },
     {
-      title: 'Consultation de Suivi',
-      price: '50€',
+      title: 'Consultation de suivi',
+      price: '50 €',
       description: 'Pour les patients en cours de traitement',
       features: [
         'Évaluation des progrès',
-        'Ajustements vertébraux',
+        'Techniques adaptées à votre situation',
         'Conseils personnalisés',
         'Adaptation du plan de traitement si nécessaire'
       ]
@@ -40,13 +40,13 @@ const Pricing = () => {
     <Box>
       <Seo page={seo.pages.pricing} />
       <HeroBanner
-        title="Nos Tarifs"
+        title="Tarifs des consultations"
         subtitle="Des tarifs transparents pour vos soins de chiropraxie"
         backgroundImage={cabinetImage}
       />
 
       <Section
-        title="Grille Tarifaire"
+        title="Les consultations"
         centered
       >
         <Grid container spacing={4} justifyContent="center">
@@ -94,23 +94,23 @@ const Pricing = () => {
         
         <Box sx={{ textAlign: 'center', mt: 4 }}>
           <Typography variant="body2" color="text.secondary">
-            Tous nos tarifs sont en euros TTC. Les règlements peuvent être effectués par carte bancaire, espèces ou chèque.
+            Les tarifs sont en euros TTC. Les règlements peuvent être effectués par carte bancaire, espèces ou chèque.
           </Typography>
         </Box>
       </Section>
 
       <Section
-        title="Questions sur nos tarifs ?"
+        title="Une question sur les tarifs ?"
         background="primary"
         centered
         maxWidth="md"
       >
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ mb: 4, color: 'white', opacity: 0.9 }}>
-            N'hésitez pas à nous contacter pour toute information complémentaire sur nos tarifs.
+            Contactez le cabinet pour toute question sur les tarifs ou les modalités de règlement.
           </Typography>
           <Typography variant="h6" sx={{ mb: 4, color: 'white', opacity: 0.9 }}>
-            N'hésitez pas à vous rapprocher de votre mutuelle. La plupart des contrats incluent la prise en charge des premières consultations de chiropraxie.
+            Une prise en charge peut être prévue selon votre contrat de mutuelle. Renseignez-vous auprès de votre organisme pour connaître les conditions de remboursement.
           </Typography>
           <Button
             component={Link}
@@ -126,7 +126,7 @@ const Pricing = () => {
               fontWeight: 600
             }}
           >
-            Nous Contacter
+            Contacter le cabinet
           </Button>
         </Box>
       </Section>

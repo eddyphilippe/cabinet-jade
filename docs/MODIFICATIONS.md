@@ -17,6 +17,20 @@ Modèle à copier :
 
 ---
 
+## 2026-10-30 — Relecture et personnalisation des textes
+
+**Objectif :** rendre le site plus personnel, clarifier la première visite et corriger les formulations trop affirmatives.
+
+**Fichiers modifiés :** pages Accueil, Cabinet, Tarifs, Contact, Confidentialité, page introuvable et Soins proposés ; en-tête et pied de page.
+
+**Résultat :** Jade Philippe est mise en avant dès l’accueil ; le déroulement d’une première consultation est expliqué ; les répétitions, titres et tarifs sont harmonisés. Les sept approches de soins, leur ordre et leur présentation détaillée sont conservés, conformément à la demande. Aucune durée de consultation n’a été inventée.
+
+**Validation :** compilation avec `CI=true` et 7 tests réussis.
+
+**Commit :** voir le journal Git du 30/10/2026.
+
+---
+
 ## 2026-10-15 — Libellé de conversion Google Ads
 
 **Objectif :** Ads ne détectait pas l'action « Prise de rendez-vous »,

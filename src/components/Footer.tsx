@@ -20,8 +20,8 @@ const Footer = () => {
   const footerLinks = {
     navigation: [
       { name: 'Accueil', path: '/' },
-      { name: 'Le Cabinet', path: '/about' },
-      { name: 'Soins Proposés', path: '/services' },
+      { name: 'Le cabinet', path: '/about' },
+      { name: 'Soins proposés', path: '/services' },
       { name: 'Tarifs', path: '/pricing' },
       { name: 'Contact', path: '/contact' }
     ],
@@ -45,7 +45,7 @@ const Footer = () => {
               {cabinet.name}
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.8 }}>
-              Centre de chiropraxie dédié à la santé de votre système neuro-musculo-squelettique et à votre bien-être.
+              Jade Philippe, chiropracteur à Creully-sur-Seulles. Une prise en charge personnalisée des douleurs musculaires et articulaires.
             </Typography>
             <Typography variant="body2" gutterBottom>
               <strong>Email :</strong> {cabinet.email}
@@ -77,7 +77,7 @@ const Footer = () => {
           {/* Services */}
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="subtitle1" component="div" gutterBottom fontWeight={600}>
-              Nos Soins
+              Les soins
             </Typography>
             <Stack spacing={1}>
               {footerLinks.services.map((link) => (

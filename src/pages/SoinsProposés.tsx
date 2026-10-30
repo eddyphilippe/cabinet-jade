@@ -15,39 +15,39 @@ const SoinsProposés = () => {
     {
       id: 'chiropraxie-generale',
       title: 'Chiropraxie Générale',
-      description: 'Ajustements vertébraux pour corriger les désalignements, réduire les douleurs et améliorer la mobilité.',
+      description: 'Techniques manuelles visant à soulager les douleurs et à améliorer la mobilité, selon les résultats de l’examen.',
       longDescription: "La chiropraxie générale se concentre sur le diagnostic, le traitement et la prévention des troubles mécaniques du système musculo-squelettique, en particulier la colonne vertébrale.",
       benefits: [
         'Soulagement des douleurs cervicales, dorsales et lombaires',
         'Amélioration de la mobilité articulaire',
-        "Réduction de l'inflammation",
+        "Prise en charge adaptée aux symptômes",
         'Amélioration de la posture',
-        'Optimisation de la fonction nerveuse'
+        'Conseils adaptés aux activités quotidiennes'
       ]
     },
     {
       id: 'therapie-tissus-mous',
       title: 'Thérapie des Tissus Mous',
-      description: 'Techniques de manipulation des muscles et des fascias pour soulager les tensions et favoriser la guérison.',
-      longDescription: "La thérapie des tissus mous cible les muscles, tendons, ligaments et fascias. Elle vise à libérer les tensions, améliorer la circulation et favoriser la guérison naturelle de ces tissus.",
+      description: 'Techniques de manipulation des muscles et des fascias pour soulager les tensions et accompagner la récupération.',
+      longDescription: "La thérapie des tissus mous cible les muscles, tendons, ligaments et fascias. Elle vise à libérer les tensions, améliorer la circulation et accompagner la récupération de ces tissus.",
       benefits: [
         'Réduction des tensions musculaires',
         'Amélioration de la flexibilité',
         'Augmentation de la circulation sanguine',
         'Réduction des douleurs chroniques',
-        'Accélération de la récupération après blessure'
+        'Accompagnement de la récupération après blessure'
       ]
     },
     {
       id: 'dry-needling',
       title: 'Dry Needling',
       description: 'Technique utilisant des aiguilles fines pour cibler les points de tension musculaires et libérer les douleurs.',
-      longDescription: "Le Dry Needling est une technique précise qui consiste à insérer des aiguilles fines dans les points gâchettes musculaires (trigger points) pour soulager la douleur et restaurer la fonction musculaire. Cette approche est particulièrement efficace pour le traitement du lumbago en phase aiguë ou pour les douleurs myofasciales chroniques.",
+      longDescription: "Le Dry Needling est une technique précise qui consiste à insérer des aiguilles fines dans les points gâchettes musculaires (trigger points) pour soulager la douleur et restaurer la fonction musculaire. Son utilisation dépend des résultats de l’examen et de la situation de chaque patient.",
       benefits: [
         'Libération des points de tension musculaire',
-        'Diminution rapide de la douleur',
+        'Recherche d’un soulagement de la douleur',
         'Amélioration de la mobilité articulaire',
-        'Restauration de la fonction musculaire normale',
+        'Travail sur la fonction musculaire',
         'Complémentaire aux ajustements de chiropraxie'
       ]
     },
@@ -78,12 +78,12 @@ const SoinsProposés = () => {
     {
       id: 'chiropraxie-sportive',
       title: 'Chiropraxie Sportive',
-      description: 'Soins spécialisés pour les sportifs afin d\'optimiser leurs performances et accélérer leur récupération.',
-      longDescription: "La chiropraxie sportive est une approche spécialisée qui combine techniques d'ajustement, thérapie des tissus mous et conseils personnalisés pour les sportifs de tous niveaux. Elle vise à améliorer les performances, prévenir les blessures et accélérer la récupération. Dans les pays anglo-saxons, les chiropracteurs sont intégrés de longue date aux staffs médicaux des équipes sportives professionnelles, aux côtés des médecins et des préparateurs physiques.",
+      description: 'Prise en charge adaptée aux activités, aux contraintes et aux objectifs des sportifs.',
+      longDescription: "La chiropraxie sportive est une approche spécialisée qui combine techniques d'ajustement, thérapie des tissus mous et conseils personnalisés pour les sportifs de tous niveaux. Elle vise à accompagner la pratique sportive, à travailler la mobilité et à soutenir la reprise d’activité. Dans les pays anglo-saxons, les chiropracteurs sont intégrés de longue date aux staffs médicaux des équipes sportives professionnelles, aux côtés des médecins et des préparateurs physiques.",
       benefits: [
-        'Amélioration des performances sportives',
-        'Prévention des blessures',
-        'Récupération plus rapide après l\'effort',
+        'Accompagnement des objectifs sportifs',
+        'Conseils pour la pratique sportive',
+        'Accompagnement de la récupération après l\'effort',
         'Correction des déséquilibres biomécaniques',
         'Optimisation de la mobilité et de la stabilité'
       ]
@@ -98,7 +98,7 @@ const SoinsProposés = () => {
         "Amélioration de l'équilibre et de la coordination",
         'Prévention des récidives',
         'Correction des schémas de mouvement déficients',
-        'Autonomisation du patient dans sa guérison'
+        'Autonomisation du patient dans sa prise en charge'
       ]
     }
   ];
@@ -107,18 +107,18 @@ const SoinsProposés = () => {
     <Box>
       <Seo page={seo.pages.services} />
       <HeroBanner
-        title="Soins Proposés"
-        subtitle={`Découvrez nos approches thérapeutiques au ${cabinet.name}`}
+        title="Soins proposés"
+        subtitle={`Découvrez les approches thérapeutiques au ${cabinet.name}`}
         backgroundImage={cabinetImage}
       />
 
       <Section
-        title="Nos Approches Thérapeutiques"
+        title="Les approches thérapeutiques"
         subtitle="Des soins adaptés à vos besoins spécifiques"
         centered
       >
         <Typography paragraph>
-          Au {cabinet.name}, nous proposons une gamme complète de soins de chiropraxie adaptés à vos besoins spécifiques. Notre objectif est de traiter non seulement vos symptômes, mais aussi l'origine de vos problèmes de santé.
+          Au {cabinet.name}, Jade Philippe choisit les techniques en fonction de vos symptômes, de vos attentes et des résultats de l’examen. Les objectifs de la prise en charge sont définis avec vous.
         </Typography>
         
         <Grid container spacing={4} sx={{ mt: 4 }}>
@@ -191,14 +191,14 @@ const SoinsProposés = () => {
       ))}
 
       <Section
-        title="Questions sur nos soins ?"
+        title="Des questions sur les soins ?"
         background="primary"
         centered
         maxWidth="md"
       >
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ mb: 4, color: 'white', opacity: 0.9, fontWeight: 'normal' }}>
-            Prenez contact avec nous pour en savoir plus ou pour réserver une consultation.
+            Contactez le cabinet pour en savoir plus ou pour réserver une consultation.
           </Typography>
           <Button
             component={Link}
@@ -214,7 +214,7 @@ const SoinsProposés = () => {
               fontWeight: 600
             }}
           >
-            Nous Contacter
+            Contacter le cabinet
           </Button>
         </Box>
       </Section>

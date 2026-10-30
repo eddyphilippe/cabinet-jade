@@ -18,35 +18,35 @@ const About = () => {
     <Box>
       <Seo page={seo.pages.about} />
       <HeroBanner
-        title="À Propos"
-        subtitle={`Découvrez le ${cabinet.name} et notre approche de la chiropraxie`}
+        title="Le cabinet"
+        subtitle={`Découvrez le cabinet de ${cabinet.practitioner} à ${cabinet.city}`}
         backgroundImage={cabinetImage}
       />
 
       <Section
-        title="Notre Centre"
+        title="Un cabinet à votre écoute"
         background="white"
       >
         <Typography paragraph>
-          Le {cabinet.name} a été fondé avec une mission claire : offrir des soins de chiropraxie personnalisés dans un environnement accueillant et professionnel. Notre centre allie expertise technique et approche humaine pour vous accompagner vers une meilleure santé vertébrale.
+          {cabinet.practitioner} vous reçoit dans un cadre accueillant pour une prise en charge personnalisée. Elle prend le temps d’écouter vos attentes et de vous expliquer les soins proposés.
         </Typography>
 
         <Typography paragraph>
-          Situé à {cabinet.city}, notre centre en rez-de-chaussée vous offre un accès sans marche, à proximité d'un parking dédié.
+          Situé à {cabinet.city}, le cabinet est installé en rez-de-chaussée, avec un accès sans marche et un parking dédié.
         </Typography>
 
         <Box sx={{ mt: 4, mb: 4 }}>
           <Typography variant="h6" gutterBottom>
-            Notre Espace
+            Un espace accueillant
           </Typography>
 
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={7}>
               <Typography paragraph>
-                Découvrez notre centre lumineux, conçu pour vous offrir un environnement apaisant lors de vos séances de chiropraxie.
+                Le cabinet vous accueille dans un espace lumineux et calme pour vos consultations.
               </Typography>
               <Typography paragraph>
-                Équipé de matériel moderne et performant, le {cabinet.name} vous propose des soins personnalisés dans les meilleures conditions.
+                Les techniques et le matériel utilisés sont choisis en fonction de votre situation et des résultats de l’examen.
               </Typography>
               <Typography paragraph>
                 Un coin de jeux est à la disposition des enfants : vous pouvez venir accompagné de vos enfants pour votre consultation.
@@ -76,18 +76,11 @@ const About = () => {
           </Grid>
         </Box>
 
-        <Box sx={{ mt: 4, mb: 4 }}>
-          <Typography variant="h6" gutterBottom>
-            Localisation
-          </Typography>
-          <Typography paragraph>
-            Le {cabinet.name} est situé à {cabinet.city}, {cabinet.address}, parking dédié.
-          </Typography>
-        </Box>
+
       </Section>
 
       <Section
-        title="Notre Localisation"
+        title="Où se trouve le cabinet ?"
         background="white"
         centered
       >
@@ -132,21 +125,21 @@ const About = () => {
               Diplômée de l'Institut Franco-Européen de Chiropraxie (<strong>IFEC</strong>), {cabinet.practitioner} s'est formée en complément à la <strong>prise en charge du sportif</strong> et au <strong>Dry Needling</strong>. Son approche privilégie les techniques manuelles, adaptées aux besoins de chaque patient.
             </Typography>
             <Typography paragraph>
-              Sa philosophie de soin est centrée sur le patient et son bien-être global. Elle croit fermement que notre corps a une capacité naturelle d'auto-guérison que la chiropratique peut aider à optimiser. Son approche combine différentes techniques en fonction des besoins spécifiques de chaque patient.
+              Jade Philippe construit la prise en charge avec vous, en tenant compte de vos symptômes, de vos activités et de vos objectifs. Elle associe les techniques adaptées à votre situation à des conseils et à des exercices personnalisés.
             </Typography>
           </Grid>
         </Grid>
       </Section>
 
       <Section
-        title="Des questions sur notre approche ?"
+        title="Des questions sur la prise en charge ?"
         background="primary"
         centered
         maxWidth="md"
       >
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ mb: 4, color: 'white', opacity: 0.9 }}>
-            N'hésitez pas à nous contacter pour toute information complémentaire.
+            Contactez le cabinet pour poser vos questions avant une consultation.
           </Typography>
           <Button
             component={Link}
@@ -162,7 +155,7 @@ const About = () => {
               fontWeight: 600
             }}
           >
-            Nous Contacter
+            Contacter le cabinet
           </Button>
         </Box>
       </Section>

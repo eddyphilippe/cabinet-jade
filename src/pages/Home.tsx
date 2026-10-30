@@ -17,21 +17,20 @@ const Home = () => {
     <Box>
       <Seo page={seo.pages.home} />
       <HeroBanner
-        title={`Centre de Chiropraxie à ${cabinet.city}`}
-        subtitle={`${cabinet.practitioner}, ${cabinet.profession.toLowerCase()}`}
+        title={`${cabinet.practitioner}, chiropracteur à ${cabinet.city}`}
+        subtitle="Une prise en charge personnalisée des douleurs musculaires et articulaires"
         backgroundImage={cabinetImage}
         height="45vh"
       />
 
       <Section
-        title="Bienvenue dans un espace dédié à votre santé vertébrale et à votre bien-être"
+        title="Un accompagnement adapté à vos besoins"
         centered
         background="white"
         titleVariant="h5"
       >
         <Typography paragraph>
-          Votre thérapeute vous accueille dans un espace calme et apaisant pour prendre soin de votre santé.
-          L'approche de la chiropraxie est globale, douce et adaptée à chaque patient.
+          {cabinet.practitioner} vous accueille pour faire le point sur vos douleurs, vos difficultés de mouvement et vos attentes. Les techniques manuelles et les conseils proposés sont adaptés à votre situation.
         </Typography>
 
         <Typography paragraph>
@@ -78,15 +77,15 @@ const Home = () => {
           
           <Grid item xs={12} md={8}>
             <Typography variant="h6" gutterBottom>
-              Rôle de votre chiropracteur
+              Votre prise en charge avec Jade Philippe
             </Typography>
             
             <Typography paragraph>
-              Le travail d'un chiropracteur consiste à diagnostiquer, traiter et prévenir les troubles neuro-musculo-squelettiques, en particulier ceux liés à la colonne vertébrale. Votre thérapeute utilise la manipulation manuelle des articulations, principalement la colonne vertébrale, pour améliorer leur mobilité, soulager la douleur et optimiser le fonctionnement du système nerveux. Cela peut inclure des ajustements vertébraux, des conseils sur la posture, des exercices de rééducation ainsi que des conseils sur votre mode de vie.
+              La consultation permet de faire le point sur vos symptômes, vos antécédents et vos habitudes de vie. Jade Philippe s’appuie sur cet échange et sur un examen pour vous proposer une prise en charge adaptée.
             </Typography>
             
             <Typography paragraph>
-              Les chiropracteurs traitent des douleurs diverses comme les douleurs lombaires, cervicales, les migraines, les tendinopathies, les douleurs articulaires et les troubles liés au stress et aux déséquilibres posturaux. Ils abordent souvent le corps de façon global, cherchant à améliorer le bien-être général du patient en se concentrant sur l'origine mécanique des douleurs.
+              Les soins peuvent associer des techniques manuelles, un travail musculaire et des exercices personnalisés. Les objectifs sont définis avec vous, en tenant compte de vos activités quotidiennes et sportives.
             </Typography>
             
             <Box sx={{ mt: 3 }}>
@@ -97,7 +96,7 @@ const Home = () => {
                 to="/services"
                 sx={{ mr: 2 }}
               >
-                Découvrir nos soins
+                Découvrir les soins
               </Button>
               <AppointmentButton variant="outlined" />
             </Box>
@@ -105,35 +104,27 @@ const Home = () => {
         </Grid>
       </Section>
 
-      <Section
-        background="beige-light"
-      >
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" color="primary.main" gutterBottom>
-              Votre Santé, Notre Priorité
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Box
-              sx={{
-                p: 4,
-                border: '1px solid rgba(74, 124, 89, 0.2)',
-                borderRadius: '8px',
-                bgcolor: 'white',
-                textAlign: 'center',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.05)',
-              }}
-            >
-              <Typography variant="h5" gutterBottom color="secondary.main">
-                "La santé est un état de complet bien-être physique, mental et social."
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Organisation Mondiale de la Santé
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
+      <Section title="Comment se déroule une première consultation ?" background="light">
+        <Typography variant="h6" component="h3" gutterBottom>Un échange pour comprendre votre situation</Typography>
+        <Typography paragraph>
+          Vous échangez avec Jade Philippe sur le motif de votre visite, vos antécédents et vos attentes.
+        </Typography>
+        <Typography variant="h6" component="h3" gutterBottom>Un examen et des explications</Typography>
+        <Typography paragraph>
+          L’examen permet d’évaluer votre situation et de discuter des soins qui peuvent vous être proposés.
+          Jade Philippe vous explique les techniques envisagées et répond à vos questions avant tout soin.
+        </Typography>
+        <Typography variant="h6" component="h3" gutterBottom>Une prise en charge adaptée</Typography>
+        <Typography paragraph>
+          Un premier soin peut être proposé si votre situation le permet. La suite de la prise en charge
+          est définie avec vous selon les résultats de l’examen et vos besoins.
+        </Typography>
+        <Typography paragraph>
+          Si vous disposez de comptes rendus ou d’examens en lien avec votre motif de consultation,
+          vous pouvez les apporter. Pour connaître la durée à prévoir ou poser une question avant votre visite,
+          contactez le cabinet.
+        </Typography>
+        <AppointmentButton size="large" />
       </Section>
     </Box>
   );

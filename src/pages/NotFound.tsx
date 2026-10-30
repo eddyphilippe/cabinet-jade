@@ -43,7 +43,7 @@ const NotFound = () => {
             fontWeight: 600
           }}
         >
-          Page Non Trouvée
+          Page introuvable
         </Typography>
         
         <Typography 
@@ -66,7 +66,7 @@ const NotFound = () => {
             to="/"
             size="large"
           >
-            Retour à l'Accueil
+            Retour à l’accueil
           </Button>
           
           <Button 
@@ -76,7 +76,7 @@ const NotFound = () => {
             to="/contact"
             size="large"
           >
-            Nous Contacter
+            Contacter le cabinet
           </Button>
         </Box>
       </Box>

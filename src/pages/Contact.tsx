@@ -31,7 +31,7 @@ const Contact = () => {
     <Box>
       <Seo page={seo.pages.contact} />
       <HeroBanner
-        title="Contactez-Nous"
+        title="Contacter le cabinet"
         subtitle="À votre écoute pour répondre à vos questions"
         backgroundImage={cabinetImage}
       />
@@ -43,8 +43,7 @@ const Contact = () => {
           
           <Grid item xs={12} md={6}>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-              N'hésitez pas à nous contacter pour toute question concernant nos services, 
-              pour prendre rendez-vous ou pour obtenir plus d'informations sur notre approche chiropratique.
+              Contactez le cabinet pour poser une question sur les soins, préparer votre première visite ou prendre rendez-vous.
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
               Votre chiropracteur est disponible {openingHoursSentence}.
@@ -61,7 +60,7 @@ const Contact = () => {
             <Card sx={{ backgroundColor: 'primary.light', boxShadow: 'none', borderRadius: 2 }}>
               <CardContent sx={{ p: 3 }}>
                 <Typography variant="h6" gutterBottom fontWeight={600}>
-                  Informations de Contact
+                  Coordonnées du cabinet
                 </Typography>
                 
                 <Box sx={{ mt: 2 }}>
